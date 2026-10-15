@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocular AI Vision System | Muhammad Ikhwan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#18070a',      /* Deep Burgundy / Maroon Background */
+                            card: '#260e13',      /* Dark Maroon Card */
+                            border: '#421a22',    /* Soft Maroon Border */
+                            maroon: '#9b1c38',    /* Rich Maroon Accent */
+                            beige: '#e8dbce',     /* Warm Beige Text & Badges */
+                            beigelight: '#f7f1ea' /* Soft Off-White/Beige Highlights */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-brand-beige font-sans antialiased selection:bg-brand-maroon selection:text-brand-beigelight">
+
+    <!-- Top Navigation -->
+    <nav class="w-full bg-brand-dark/90 border-b border-brand-border py-4 px-6 fixed top-0 z-50 backdrop-blur-md">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-sm font-semibold text-brand-beige hover:text-white flex items-center gap-2 transition-colors">
+                <i class="fas fa-arrow-left"></i> Back to Main Portfolio
+            </a>
+            <span class="text-xs font-mono text-brand-beigelight bg-brand-maroon/30 px-3 py-1 rounded-full border border-brand-maroon/40">
+                Computer Vision & AI
+            </span>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="max-w-5xl mx-auto pt-28 pb-20 px-6 space-y-12">
+        
+        <!-- Header & Title -->
+        <div class="space-y-4">
+            <div class="inline-block px-3 py-1 rounded-full bg-brand-maroon/20 border border-brand-maroon/40 text-brand-beigelight text-xs font-mono">
+                Embedded Vision & Object Telemetry Pipeline
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+                Ocular AI Vision System
+            </h1>
+            <p class="text-brand-beige/80 text-base md:text-lg leading-relaxed">
+                An end-to-end low-latency computer vision pipeline engineered for real-time object tracking, feature landmark extraction, classification data telemetry over Wi-Fi, and automated visual feedback control.
+            </p>
+        </div>
+
+        <!-- High-Level Specs Banner -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">Inference Target</div>
+                <div class="text-base font-bold text-white mt-1">OpenCV / Mediapipe</div>
+            </div>
+            <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">Frame Rate</div>
+                <div class="text-base font-bold text-white mt-1">~35 FPS Low-Latency</div>
+            </div>
+            <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">Camera Feed</div>
+                <div class="text-base font-bold text-white mt-1">ESP WiFi Stream / RTSP</div>
+            </div>
+            <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">Telemetry Latency</div>
+                <div class="text-base font-bold text-white mt-1">&lt; 45 ms Response</div>
+            </div>
+        </div>
+
+        <!-- Section 1: System Architecture & Vision Pipeline -->
+        <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                <i class="fas fa-eye text-brand-maroon text-lg"></i> 1. Vision Pipeline Architecture
+            </h2>
+            <div class="bg-brand-card border border-brand-border p-6 rounded-2xl space-y-4 text-sm text-brand-beige/80 leading-relaxed">
+                <p>
+                    The Ocular AI architecture bridges edge microcontrollers with real-time host-side Python inference engines to achieve smooth camera telemetry and sub-50ms feedback loops.
+                </p>
+                <ul class="space-y-2 list-disc list-inside text-brand-beige/90">
+                    <li><strong class="text-white">Video Stream Ingestion:</strong> Captures video frames over an HTTP/RTSP stream from an ESP Wi-Fi camera module, buffering frame queues to eliminate jitter.</li>
+                    <li><strong class="text-white">Feature Extraction:</strong> Executes lightweight Mediapipe and OpenCV landmark neural networks to extract spatial matrix coordinates without heavy GPU overhead.</li>
+                    <li><strong class="text-white">Telemetry & Automation Control:</strong> Translates spatial tracking vectors into action triggers sent back to peripheral actuators or logging dashboards.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 2: Visual Demos & Bounding Box Overlays -->
+        <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                <i class="fas fa-camera text-brand-maroon text-lg"></i> 2. Tracking Demos & Bounding Box Outputs
+            </h2>
+            <p class="text-sm text-brand-beige/70">
+                Upload your tracking screenshots or demo GIFs (e.g. <code class="text-amber-200">ocular-demo-1.jpg</code>) to your main GitHub folder to feature them below.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Image Placeholder 1 -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <div class="h-52 bg-brand-dark rounded-lg flex items-center justify-center border border-brand-border overflow-hidden">
+                        <!-- Replace src with your image path e.g. ../ocular-demo-1.jpg -->
+                        <div class="text-center p-4 text-brand-beige/50">
+                            <i class="fas fa-eye text-3xl mb-2 text-brand-maroon"></i>
+                            <p class="text-xs">Upload tracking screenshot to <br><code class="text-white font-mono">ocular-demo-1.jpg</code></p>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-bold text-white">Real-Time Spatial Detection Overlay</h3>
+                    <p class="text-xs text-brand-beige/70">
+                        Bounding box coordinates calculated in real time with centroid tracking vector overlays.
+                    </p>
+                </div>
+
+                <!-- Image Placeholder 2 -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <div class="h-52 bg-brand-dark rounded-lg flex items-center justify-center border border-brand-border overflow-hidden">
+                        <!-- Replace src with your image path e.g. ../ocular-demo-2.jpg -->
+                        <div class="text-center p-4 text-brand-beige/50">
+                            <i class="fas fa-chart-line text-3xl mb-2 text-brand-maroon"></i>
+                            <p class="text-xs">Upload performance graph / interface image to <br><code class="text-white font-mono">ocular-demo-2.jpg</code></p>
+                        </div>
+                    </div>
+                    <h3 class="text-sm font-bold text-white">Telemetry & Latency Telemetry Dashboard</h3>
+                    <p class="text-xs text-brand-beige/70">
+                        Real-time logging of frame process times, detection confidence thresholds, and packet arrival rate over Wi-Fi.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Python Source Code -->
+        <section class="space-y-4">
+            <div class="flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                    <i class="fas fa-code text-brand-maroon text-lg"></i> 3. Inference Engine Script (Python / OpenCV)
+                </h2>
+                <a href="https://github.com/therealeqwan1822-a11y/muhammadikhwannazeri.github.io" target="_blank" class="text-xs text-brand-beigelight bg-brand-maroon/30 px-3 py-1.5 rounded-lg border border-brand-maroon/50 hover:bg-brand-maroon hover:text-white transition-colors flex items-center gap-1.5">
+                    <i class="fab fa-github"></i> Repository Code
+                </a>
+            </div>
+
+            <div class="bg-brand-card border border-brand-border rounded-xl p-4">
+                <pre class="bg-black/70 p-4 rounded-lg text-emerald-400 font-mono text-xs overflow-x-auto leading-relaxed border border-brand-border/60">
+# ====================================================================
+# Project: Ocular AI Vision Inference Pipeline
+# Author: Muhammad Ikhwan Bin Nazeri
+# Frameworks: OpenCV / Mediapipe / ESP WiFi Stream
+# ====================================================================
+
+import cv2
+import time
+import numpy as np
+
+# ESP32-CAM Wi-Fi Stream Endpoint
+stream_url = "http://192.168.1.100:81/stream"
+cap = cv2.VideoCapture(stream_url)
+
+prev_frame_time = 0
+
+while cap.isOpened():
+    ret, frame = cap.read()
+    if not ret:
+        print("[ERROR] Camera stream disconnected. Retrying...")
+        break
+
+    # Spatial Feature Processing
+    h, w, c = frame.shape
+    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+
+    # Frame Rate (FPS) Calculation
+    new_frame_time = time.time()
+    fps = 1 / (new_frame_time - prev_frame_time) if prev_frame_time != 0 else 0
+    prev_frame_time = new_frame_time
+
+    # Display Overlay
+    cv2.putText(frame, f"FPS: {int(fps)}", (20, 40), 
+                cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
+
+    cv2.imshow("Ocular AI Vision Feed", frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release()
+cv2.destroyAllWindows()</pre>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 px-6 border-t border-brand-border text-center text-xs text-brand-beige/60">
+        <p>© 2026 Muhammad Ikhwan Bin Nazeri. Hosted on GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>

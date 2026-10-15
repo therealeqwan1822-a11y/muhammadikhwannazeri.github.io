@@ -1,91 +1,224 @@
-<!-- Featured Projects Section -->
-<section id="projects" class="space-y-8">
-    <div>
-        <h2 class="text-3xl font-bold text-white">Featured Projects</h2>
-        <p class="text-brand-beige/70 text-sm mt-1">Selected engineering builds in hardware synthesis, embedded AI, and logic design.</p>
-    </div>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Ikhwan | Hardware & Embedded Systems Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#18070a',      /* Deep Burgundy / Maroon Background */
+                            card: '#260e13',      /* Dark Maroon Card */
+                            border: '#421a22',    /* Soft Maroon Border */
+                            maroon: '#9b1c38',    /* Rich Maroon Accent */
+                            beige: '#e8dbce',     /* Warm Beige Text & Badges */
+                            beigelight: '#f7f1ea' /* Soft Off-White/Beige Highlights */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-brand-beige font-sans antialiased selection:bg-brand-maroon selection:text-brand-beigelight">
 
-    <!-- Project Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Top Navigation -->
+    <nav class="w-full bg-brand-dark/90 border-b border-brand-border py-4 px-6 fixed top-0 z-50 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#home" class="text-lg font-bold text-white tracking-wider uppercase">
+                Muhammad Ikhwan
+            </a>
+            <div class="hidden md:flex items-center gap-6 text-xs font-semibold text-brand-beige/80">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+                <a href="#contact" class="px-4 py-2 bg-brand-maroon text-white rounded-lg hover:opacity-90 transition-opacity">Contact Me</a>
+            </div>
+        </div>
+    </nav>
 
-        <!-- PROJECT 1: Tic-Tac-Toe FPGA -->
-        <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between hover:border-brand-maroon/60 transition-colors">
-            <div class="space-y-4">
-                <div class="flex justify-between items-center">
-                    <span class="text-xs font-mono text-brand-maroon bg-brand-maroon/20 px-2.5 py-1 rounded-full border border-brand-maroon/40">
-                        VHDL / RTL
-                    </span>
-                    <i class="fas fa-gamepad text-brand-beige/40"></i>
+    <!-- Main Content Container -->
+    <main class="max-w-6xl mx-auto pt-28 pb-20 px-6 space-y-20" id="home">
+
+        <!-- Hero Section -->
+        <section class="space-y-6 max-w-3xl">
+            <div class="inline-block px-3 py-1 rounded-full bg-brand-maroon/20 border border-brand-maroon/40 text-brand-beigelight text-xs font-mono">
+                Texas Instruments Internship Candidate (July–Oct 2026)
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                Hardware Synthesis & Embedded Edge AI Engineer
+            </h1>
+            <p class="text-brand-beige/80 text-base md:text-lg leading-relaxed">
+                Specializing in VHDL RTL digital design, FPGA synthesis on Intel DE2-115, real-time computer vision pipelines, and asynchronous edge IoT telemetry protocols.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-2">
+                <a href="#projects" class="px-6 py-3 bg-brand-maroon text-white font-semibold text-xs rounded-xl shadow-lg hover:opacity-90 transition-opacity flex items-center gap-2">
+                    View Technical Builds <i class="fas fa-arrow-down"></i>
+                </a>
+                <a href="https://github.com/therealeqwan1822-a11y/muhammadikhwannazeri.github.io" target="_blank" class="px-6 py-3 bg-brand-card text-brand-beige border border-brand-border font-semibold text-xs rounded-xl hover:text-white hover:border-brand-maroon transition-colors flex items-center gap-2">
+                    <i class="fab fa-github text-base"></i> GitHub Repository
+                </a>
+            </div>
+        </section>
+
+        <hr class="border-brand-border/60">
+
+        <!-- Skills Core Section -->
+        <section id="skills" class="space-y-6">
+            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                <i class="fas fa-microchip text-brand-maroon"></i> Technical Competencies
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+                <div class="bg-brand-card border border-brand-border p-5 rounded-2xl space-y-3">
+                    <h3 class="font-bold text-white text-sm">RTL Synthesis & Digital Logic</h3>
+                    <p class="text-brand-beige/70">VHDL, Quartus Prime, ModelSim Waveform Debug, FSM Architecture, Register Transfer Level (RTL) Logic Design.</p>
                 </div>
-                <h3 class="text-xl font-bold text-white">Tic-Tac-Toe Game on Intel DE2-115 FPGA</h3>
-                <p class="text-brand-beige/80 text-xs leading-relaxed">
-                    Designed and synthesized a hardware digital Tic-Tac-Toe game in VHDL. Built custom Finite State Machine (FSM) control logic to validate board moves, control turn sequences, and check win/draw logic.
-                </p>
-                <div class="flex flex-wrap gap-2 text-[11px] font-mono text-brand-beige/70">
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">VHDL</span>
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Intel DE2-115</span>
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Quartus Prime</span>
+                <div class="bg-brand-card border border-brand-border p-5 rounded-2xl space-y-3">
+                    <h3 class="font-bold text-white text-sm">Computer Vision & Deep Learning</h3>
+                    <p class="text-brand-beige/70">Python, OpenCV, Mediapipe, ONNX Model Integration, 2D FFT Frequency Analysis, Dynamic Feature Fusion.</p>
+                </div>
+                <div class="bg-brand-card border border-brand-border p-5 rounded-2xl space-y-3">
+                    <h3 class="font-bold text-white text-sm">Edge IoT & Embedded Systems</h3>
+                    <p class="text-brand-beige/70">ESP32 Microcontrollers, MQTT PubSubClient Protocol, Wokwi Simulation, SQLite Databases, Cloud CSV Logging.</p>
                 </div>
             </div>
+        </section>
 
-            <!-- BUTTON NESTED INSIDE CARD -->
-            <a href="projects/fpga-tic-tac-toe.html" class="mt-6 block text-center py-2.5 bg-brand-maroon text-white font-semibold rounded-lg text-xs hover:opacity-90 transition-opacity shadow-md">
-                View Detailed Writeup & Code →
-            </a>
-        </div>
-
-        <!-- PROJECT 2: Ocular AI Vision System -->
-        <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between hover:border-brand-maroon/60 transition-colors">
-            <div class="space-y-4">
-                <div class="flex justify-between items-center">
-                    <span class="text-xs font-mono text-brand-maroon bg-brand-maroon/20 px-2.5 py-1 rounded-full border border-brand-maroon/40">
-                        Computer Vision
-                    </span>
-                    <i class="fas fa-eye text-brand-beige/40"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white">Ocular AI Vision System</h3>
-                <p class="text-brand-beige/80 text-xs leading-relaxed">
-                    Engineered an end-to-end computer vision pipeline running low-latency inference scripts for real-time object tracking, visual data classification, and automated camera telemetry.
-                </p>
-                <div class="flex flex-wrap gap-2 text-[11px] font-mono text-brand-beige/70">
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Python</span>
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">OpenCV</span>
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Mediapipe</span>
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">ESP WiFi</span>
-                </div>
+        <!-- Featured Projects Section -->
+        <section id="projects" class="space-y-8">
+            <div>
+                <h2 class="text-3xl font-bold text-white">Featured Engineering Projects</h2>
+                <p class="text-brand-beige/70 text-sm mt-1">Detailed case studies in hardware synthesis, computer vision, and embedded logic design.</p>
             </div>
 
-            <!-- BUTTON NESTED INSIDE CARD -->
-            <a href="projects/ocular-ai.html" class="mt-6 block text-center py-2.5 bg-brand-maroon text-white font-semibold rounded-lg text-xs hover:opacity-90 transition-opacity shadow-md">
-                View Detailed Writeup & Code →
-            </a>
-        </div>
+            <!-- Project Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <!-- PROJECT 3: PainAlert Hospice Monitoring -->
-        <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between hover:border-brand-maroon/60 transition-colors">
-            <div class="space-y-4">
-                <div class="flex justify-between items-center">
-                    <span class="text-xs font-mono text-brand-maroon bg-brand-maroon/20 px-2.5 py-1 rounded-full border border-brand-maroon/40">
-                        Embedded IoT
-                    </span>
-                    <i class="fas fa-heartbeat text-brand-beige/40"></i>
+                <!-- PROJECT 1: Tic-Tac-Toe FPGA -->
+                <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between hover:border-brand-maroon/60 transition-colors">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-mono text-brand-beigelight bg-brand-maroon/20 px-2.5 py-1 rounded-full border border-brand-maroon/40">
+                                VHDL / RTL Design
+                            </span>
+                            <i class="fas fa-gamepad text-brand-beige/40"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Tic-Tac-Toe Game on Intel DE2-115 FPGA</h3>
+                        <p class="text-brand-beige/80 text-xs leading-relaxed">
+                            Designed and synthesized a custom digital hardware Tic-Tac-Toe engine in VHDL. Features an 8-state Finite State Machine (FSM), real-time illegal move detection, and 16x2 LCD character hardware output.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-[11px] font-mono text-brand-beige/70">
+                            <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">VHDL</span>
+                            <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Intel DE2-115</span>
+                            <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Quartus Prime</span>
+                        </div>
+                    </div>
+
+                    <!-- BUTTON NESTED INSIDE CARD -->
+                    <a href="projects/fpga-tic-tac-toe.html" class="mt-6 block text-center py-2.5 bg-brand-maroon text-white font-semibold rounded-lg text-xs hover:opacity-90 transition-opacity shadow-md">
+                        View Detailed Writeup & Code →
+                    </a>
                 </div>
-                <h3 class="text-xl font-bold text-white">PainAlert Hospice Monitoring</h3>
-                <p class="text-brand-beige/80 text-xs leading-relaxed">
-                    Integrated ESP WiFi microcontrollers and vision classification models in Google Colab to observe expressions in hospice care, transmitting real-time alert signals to caregiver displays.
-                </p>
-                <div class="flex flex-wrap gap-2 text-[11px] font-mono text-brand-beige/70">
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">ESP32</span>
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Google Colab</span>
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">IoT Telemetry</span>
+
+                <!-- PROJECT 2: Ocular AI Vision System -->
+                <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between hover:border-brand-maroon/60 transition-colors">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-mono text-brand-beigelight bg-brand-maroon/20 px-2.5 py-1 rounded-full border border-brand-maroon/40">
+                                Computer Vision & IoT
+                            </span>
+                            <i class="fas fa-eye text-brand-beige/40"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Ocular AI Time & Attendance System</h3>
+                        <p class="text-brand-beige/80 text-xs leading-relaxed">
+                            Engineered an occlusion-resilient dual-modal periocular vision system with 2D FFT frequency anti-spoofing, asynchronous ESP32 MQTT door actuation, and real-time Google Drive cloud logging.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-[11px] font-mono text-brand-beige/70">
+                            <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Python</span>
+                            <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">OpenCV</span>
+                            <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">ESP32 / MQTT</span>
+                            <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Cloud Sync</span>
+                        </div>
+                    </div>
+
+                    <!-- BUTTON NESTED INSIDE CARD -->
+                    <a href="projects/ocular-ai.html" class="mt-6 block text-center py-2.5 bg-brand-maroon text-white font-semibold rounded-lg text-xs hover:opacity-90 transition-opacity shadow-md">
+                        View Detailed Writeup & Code →
+                    </a>
                 </div>
+
+                <!-- PROJECT 3: PainAlert Hospice Monitoring -->
+                <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between hover:border-brand-maroon/60 transition-colors">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-mono text-brand-beigelight bg-brand-maroon/20 px-2.5 py-1 rounded-full border border-brand-maroon/40">
+                                Embedded IoT
+                            </span>
+                            <i class="fas fa-heartbeat text-brand-beige/40"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">PainAlert Hospice Monitoring</h3>
+                        <p class="text-brand-beige/80 text-xs leading-relaxed">
+                            Integrated ESP WiFi microcontrollers and vision classification models in Google Colab to observe expressions in hospice care, transmitting real-time alert signals to caregiver displays.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-[11px] font-mono text-brand-beige/70">
+                            <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">ESP32</span>
+                            <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Google Colab</span>
+                            <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">IoT Telemetry</span>
+                        </div>
+                    </div>
+
+                    <!-- BUTTON NESTED INSIDE CARD -->
+                    <a href="#" class="mt-6 block text-center py-2.5 bg-brand-dark text-brand-beige/60 font-semibold rounded-lg text-xs border border-brand-border hover:text-white transition-colors">
+                        Writeup Coming Soon
+                    </a>
+                </div>
+
             </div>
+        </section>
 
-            <!-- BUTTON NESTED INSIDE CARD -->
-            <a href="#" class="mt-6 block text-center py-2.5 bg-brand-dark text-brand-beige/60 font-semibold rounded-lg text-xs border border-brand-border hover:text-white transition-colors">
-                Writeup Coming Soon
-            </a>
-        </div>
+        <!-- Experience / Education -->
+        <section id="experience" class="space-y-6">
+            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                <i class="fas fa-graduation-cap text-brand-maroon"></i> Academic Background
+            </h2>
+            <div class="bg-brand-card border border-brand-border p-6 rounded-2xl space-y-2">
+                <div class="flex flex-col md:flex-row justify-between md:items-center">
+                    <h3 class="text-lg font-bold text-white">Universiti Putra Malaysia (UPM)</h3>
+                    <span class="text-xs font-mono text-brand-beige/60">Digital Systems / Engineering Focus</span>
+                </div>
+                <p class="text-xs text-brand-beige/80 leading-relaxed">
+                    Coursework and practical lab implementations covering Computer Architecture, Digital Logic Design, Microprocessor Systems, Advanced Embedded Software, and FPGA RTL Synthesis.
+                </p>
+            </div>
+        </section>
 
-    </div>
-</section>
+        <!-- Contact Section -->
+        <section id="contact" class="space-y-6 text-center pt-10 border-t border-brand-border">
+            <h2 class="text-3xl font-bold text-white">Let's Connect</h2>
+            <p class="text-sm text-brand-beige/80 max-w-xl mx-auto">
+                Open for internship opportunities in hardware engineering, digital system design, and embedded systems development.
+            </p>
+            <div class="flex justify-center gap-4 pt-2">
+                <a href="https://github.com/therealeqwan1822-a11y/muhammadikhwannazeri.github.io" target="_blank" class="px-5 py-2.5 bg-brand-card border border-brand-border rounded-xl text-xs text-brand-beige hover:text-white hover:border-brand-maroon transition-colors flex items-center gap-2">
+                    <i class="fab fa-github text-sm"></i> GitHub
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-brand-border text-center text-xs text-brand-beige/60">
+        <p>© 2026 Muhammad Ikhwan Bin Nazeri. Hosted on GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>

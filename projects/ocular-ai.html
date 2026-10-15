@@ -77,7 +77,7 @@
             </div>
         </div>
 
-        <!-- Section 1: The Engineering Problem & Market Benchmark -->
+        <!-- Section 1: Problem Statement & Competitor Analysis -->
         <section class="space-y-4">
             <h2 class="text-2xl font-bold text-white flex items-center gap-2">
                 <i class="fas fa-exclamation-triangle text-brand-maroon text-lg"></i> 1. Problem Statement & Competitor Analysis
@@ -179,10 +179,28 @@
             </div>
         </section>
 
-        <!-- Section 3: Hardware & IoT Actuation Architecture -->
+        <!-- Section 3: Live Verification & Real-Time Cloud Logging -->
         <section class="space-y-4">
             <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-                <i class="fas fa-microchip text-brand-maroon text-lg"></i> 3. Asynchronous IoT Hardware Wiring (ESP32 + MQTT)
+                <i class="fas fa-cloud-upload-alt text-brand-maroon text-lg"></i> 3. Live Cloud Database Telemetry (Google Drive CSV Sync)
+            </h2>
+            <div class="bg-brand-card border border-brand-border p-4 rounded-2xl space-y-3">
+                <img src="../ocular-cloud-csv.png" alt="Google Drive Attendance CSV Log Telemetry" class="w-full h-auto rounded-xl border border-brand-border bg-black">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 text-xs text-brand-beige/70 pt-2">
+                    <p>
+                        Figure 1: Live execution log demonstrating direct atomic file-buffer flushing (<code class="text-amber-200">os.fsync</code>) to <code class="text-white">G:\My Drive\Attendance_Logs\attendance_2026-09-28.csv</code>[cite: 42, 54]. Logs timestamp, User ID, Full-Face Score, Periocular Score, Fused Score, and Dual-Consensus status[cite: 42, 54].
+                    </p>
+                    <span class="px-2 py-1 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/60 font-mono text-[10px] whitespace-nowrap">
+                        Live Cloud Sync Confirmed
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Hardware & IoT Actuation Architecture -->
+        <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                <i class="fas fa-microchip text-brand-maroon text-lg"></i> 4. Asynchronous IoT Hardware Wiring (ESP32 + MQTT)
             </h2>
             <div class="bg-brand-card border border-brand-border p-6 rounded-2xl space-y-4 text-sm text-brand-beige/80">
                 <p>
@@ -213,11 +231,11 @@
             </div>
         </section>
 
-        <!-- Section 4: Code Architecture Showcase -->
+        <!-- Section 5: Code Architecture Showcase -->
         <section class="space-y-4">
             <div class="flex justify-between items-center">
                 <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-                    <i class="fas fa-code text-brand-maroon text-lg"></i> 4. Modular Engine Code Structure
+                    <i class="fas fa-code text-brand-maroon text-lg"></i> 5. Modular Engine Code Structure
                 </h2>
                 <a href="https://github.com/therealeqwan1822-a11y/muhammadikhwannazeri.github.io" target="_blank" class="text-xs text-brand-beigelight bg-brand-maroon/30 px-3 py-1.5 rounded-lg border border-brand-maroon/50 hover:bg-brand-maroon hover:text-white transition-colors flex items-center gap-1.5">
                     <i class="fab fa-github"></i> Repository Code

@@ -134,77 +134,103 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 px-6 max-w-6xl mx-auto space-y-12">
-        <div class="space-y-3">
-            <h2 class="text-3xl font-bold text-white">Featured Projects</h2>
-            <p class="text-brand-beige/70 text-sm">Selected engineering builds in hardware synthesis, embedded AI, and logic design.</p>
-        </div>
+   <!-- Featured Projects Section -->
+<section id="projects" class="space-y-8">
+    <div>
+        <h2 class="text-3xl font-bold text-white">Featured Projects</h2>
+        <p class="text-brand-beige/70 text-sm mt-1">Selected engineering builds in hardware synthesis, embedded AI, and logic design.</p>
+    </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Project 1 -->
-            <div class="bg-brand-card border border-brand-border rounded-xl p-6 space-y-4 hover:border-brand-maroon transition-colors flex flex-col justify-between">
-                <div class="space-y-4">
-                    <div class="flex justify-between items-start">
-                        <span class="text-xs font-mono text-brand-beigelight bg-brand-maroon/30 px-2 py-1 rounded border border-brand-maroon/40">VHDL / RTL</span>
-                        <i class="fas fa-gamepad text-brand-beige/50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Tic-Tac-Toe Game on Intel DE2-115 FPGA</h3>
-                    <p class="text-brand-beige/80 text-sm leading-relaxed">
-                        Designed and synthesized a hardware digital Tic-Tac-Toe game in VHDL. Built custom Finite State Machine (FSM) control logic to validate board moves, control turn sequences, and check win/draw logic.
-                    </p>
+    <!-- 3-Column Project Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- PROJECT 1: Tic-Tac-Toe FPGA -->
+        <div class="bg-brand-card border border-brand-border rounded-2xl overflow-hidden flex flex-col justify-between hover:border-brand-maroon/60 transition-colors">
+            <div class="p-6 space-y-4">
+                <div class="flex justify-between items-center">
+                    <span class="text-xs font-mono text-brand-maroon bg-brand-maroon/20 px-2.5 py-1 rounded-full border border-brand-maroon/40">
+                        VHDL / RTL
+                    </span>
+                    <i class="fas fa-gamepad text-brand-beige/40"></i>
                 </div>
-                <div class="flex flex-wrap gap-2 text-xs text-brand-beige pt-2">
-                    <span class="bg-brand-dark px-2 py-1 rounded border border-brand-border">VHDL</span>
-                    <span class="bg-brand-dark px-2 py-1 rounded border border-brand-border">Intel DE2-115</span>
-                    <span class="bg-brand-dark px-2 py-1 rounded border border-brand-border">Quartus Prime</span>
+                <h3 class="text-xl font-bold text-white">Tic-Tac-Toe Game on Intel DE2-115 FPGA</h3>
+                <p class="text-brand-beige/80 text-xs leading-relaxed">
+                    Designed and synthesized a hardware digital Tic-Tac-Toe game in VHDL. Built custom Finite State Machine (FSM) control logic to validate board moves, control turn sequences, and check win/draw logic.
+                </p>
+                <div class="flex flex-wrap gap-2 text-[11px] font-mono text-brand-beige/70">
+                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">VHDL</span>
+                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Intel DE2-115</span>
+                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Quartus Prime</span>
                 </div>
             </div>
-            <a href="projects/fpga-tic-tac-toe.html" class="px-4 py-2 bg-brand-maroon text-white font-semibold rounded-lg hover:opacity-90">
-    View Detailed Writeup & Code →
-</a>
-            <!-- Project 2 -->
-            <div class="bg-brand-card border border-brand-border rounded-xl p-6 space-y-4 hover:border-brand-maroon transition-colors flex flex-col justify-between">
-                <div class="space-y-4">
-                    <div class="flex justify-between items-start">
-                        <span class="text-xs font-mono text-brand-beigelight bg-brand-maroon/30 px-2 py-1 rounded border border-brand-maroon/40">Computer Vision</span>
-                        <i class="fas fa-eye text-brand-beige/50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">Ocular AI Vision System</h3>
-                    <p class="text-brand-beige/80 text-sm leading-relaxed">
-                        Engineered an end-to-end computer vision pipeline running low-latency inference scripts for real-time object tracking, visual data classification, and automated camera telemetry.
-                    </p>
+            
+            <!-- BUTTON INSIDE CARD FOOTER -->
+            <div class="p-6 pt-0">
+                <a href="projects/fpga-tic-tac-toe.html" class="block text-center py-2.5 bg-brand-maroon text-white font-semibold rounded-lg text-xs hover:opacity-90 transition-opacity shadow-md">
+                    View Detailed Writeup & Code →
+                </a>
+            </div>
+        </div>
+
+        <!-- PROJECT 2: Ocular AI Vision System -->
+        <div class="bg-brand-card border border-brand-border rounded-2xl overflow-hidden flex flex-col justify-between hover:border-brand-maroon/60 transition-colors">
+            <div class="p-6 space-y-4">
+                <div class="flex justify-between items-center">
+                    <span class="text-xs font-mono text-brand-maroon bg-brand-maroon/20 px-2.5 py-1 rounded-full border border-brand-maroon/40">
+                        Computer Vision
+                    </span>
+                    <i class="fas fa-eye text-brand-beige/40"></i>
                 </div>
-                <div class="flex flex-wrap gap-2 text-xs text-brand-beige pt-2">
-                    <span class="bg-brand-dark px-2 py-1 rounded border border-brand-border">Python</span>
-                    <span class="bg-brand-dark px-2 py-1 rounded border border-brand-border">OpenCV</span>
-                    <span class="bg-brand-dark px-2 py-1 rounded border border-brand-border">Mediapipe</span>
-                    <span class="bg-brand-dark px-2 py-1 rounded border border-brand-border">ESP WiFi</span>
+                <h3 class="text-xl font-bold text-white">Ocular AI Vision System</h3>
+                <p class="text-brand-beige/80 text-xs leading-relaxed">
+                    Engineered an end-to-end computer vision pipeline running low-latency inference scripts for real-time object tracking, visual data classification, and automated camera telemetry.
+                </p>
+                <div class="flex flex-wrap gap-2 text-[11px] font-mono text-brand-beige/70">
+                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Python</span>
+                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">OpenCV</span>
+                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Mediapipe</span>
+                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">ESP WiFi</span>
                 </div>
+            </div>
+
+            <!-- BUTTON INSIDE CARD FOOTER -->
+            <div class="p-6 pt-0">
                 <a href="projects/ocular-ai.html" class="block text-center py-2.5 bg-brand-maroon text-white font-semibold rounded-lg text-xs hover:opacity-90 transition-opacity shadow-md">
-        View Detailed Writeup & Code →
-    </a>
-</div>
-
-            <!-- Project 3 -->
-            <div class="bg-brand-card border border-brand-border rounded-xl p-6 space-y-4 hover:border-brand-maroon transition-colors flex flex-col justify-between">
-                <div class="space-y-4">
-                    <div class="flex justify-between items-start">
-                        <span class="text-xs font-mono text-brand-beigelight bg-brand-maroon/30 px-2 py-1 rounded border border-brand-maroon/40">Embedded IoT</span>
-                        <i class="fas fa-heartbeat text-brand-beige/50"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white">PainAlert Hospice Monitoring</h3>
-                    <p class="text-brand-beige/80 text-sm leading-relaxed">
-                        Integrated ESP WiFi microcontrollers and vision classification models in Google Colab to observe expressions in hospice care, transmitting real-time alert signals to caregiver displays.
-                    </p>
-                </div>
-                <div class="flex flex-wrap gap-2 text-xs text-brand-beige pt-2">
-                    <span class="bg-brand-dark px-2 py-1 rounded border border-brand-border">ESP32</span>
-                    <span class="bg-brand-dark px-2 py-1 rounded border border-brand-border">RapidFlow</span>
-                    <span class="bg-brand-dark px-2 py-1 rounded border border-brand-border">Google Colab</span>
-                </div>
+                    View Detailed Writeup & Code →
+                </a>
             </div>
         </div>
-    </section>
+
+        <!-- PROJECT 3: PainAlert Hospice Monitoring -->
+        <div class="bg-brand-card border border-brand-border rounded-2xl overflow-hidden flex flex-col justify-between hover:border-brand-maroon/60 transition-colors">
+            <div class="p-6 space-y-4">
+                <div class="flex justify-between items-center">
+                    <span class="text-xs font-mono text-brand-maroon bg-brand-maroon/20 px-2.5 py-1 rounded-full border border-brand-maroon/40">
+                        Embedded IoT
+                    </span>
+                    <i class="fas fa-heartbeat text-brand-beige/40"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">PainAlert Hospice Monitoring</h3>
+                <p class="text-brand-beige/80 text-xs leading-relaxed">
+                    Integrated ESP WiFi microcontrollers and vision classification models in Google Colab to observe expressions in hospice care, transmitting real-time alert signals to caregiver displays.
+                </p>
+                <div class="flex flex-wrap gap-2 text-[11px] font-mono text-brand-beige/70">
+                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">ESP32</span>
+                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Google Colab</span>
+                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">IoT Telemetry</span>
+                </div>
+            </div>
+
+            <!-- BUTTON INSIDE CARD FOOTER -->
+            <div class="p-6 pt-0">
+                <a href="#" class="block text-center py-2.5 bg-brand-dark text-brand-beige/60 font-semibold rounded-lg text-xs border border-brand-border hover:text-white transition-colors">
+                    Writeup Coming Soon
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
 
     <!-- Experience & Leadership Section -->
     <section id="experience" class="py-20 bg-brand-card/40 border-t border-brand-border px-6">

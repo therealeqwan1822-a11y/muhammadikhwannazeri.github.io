@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ocular AI Vision System | Muhammad Ikhwan</title>
+    <title>Ocular AI TAS | Embedded Vision & IoT Engineering</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -36,7 +36,7 @@
                 <i class="fas fa-arrow-left"></i> Back to Main Portfolio
             </a>
             <span class="text-xs font-mono text-brand-beigelight bg-brand-maroon/30 px-3 py-1 rounded-full border border-brand-maroon/40">
-                Computer Vision & AI
+                Computer Vision & Edge IoT
             </span>
         </div>
     </nav>
@@ -44,152 +44,237 @@
     <!-- Page Content -->
     <main class="max-w-5xl mx-auto pt-28 pb-20 px-6 space-y-12">
         
-        <!-- Header & Title -->
-        <div class="space-y-4">
+        <!-- Header & Summary Banner -->
+        <div class="space-y-4 bg-brand-card border border-brand-border p-6 rounded-2xl">
             <div class="inline-block px-3 py-1 rounded-full bg-brand-maroon/20 border border-brand-maroon/40 text-brand-beigelight text-xs font-mono">
-                Embedded Vision & Object Telemetry Pipeline
+                Dual-Modal Ocular Verification & Asynchronous Access Control
             </div>
             <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
-                Ocular AI Vision System
+                Ocular AI Time & Attendance System (Ocular AI TAS)
             </h1>
-            <p class="text-brand-beige/80 text-base md:text-lg leading-relaxed">
-                An end-to-end low-latency computer vision pipeline engineered for real-time object tracking, feature landmark extraction, classification data telemetry over Wi-Fi, and automated visual feedback control.
+            <p class="text-brand-beige/80 text-sm md:text-base leading-relaxed">
+                An industrial-grade computer vision and edge IoT ecosystem designed to eliminate workplace entry bottlenecks and lower-face occlusion failures (masks, niqabs, prescription glasses)[cite: 19, 36]. Built with software-based 2D FFT presentation attack detection (PAD), multi-subject Euclidean centroid tracking, dynamic periocular score fusion, HiveMQ MQTT telemetry, and real-time cloud database logging[cite: 22, 23, 27, 41, 42, 45, 50, 53].
             </p>
         </div>
 
-        <!-- High-Level Specs Banner -->
+        <!-- System Key Performance Indicators (KPIs) -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
-                <div class="text-xs text-brand-beige/60 uppercase font-mono">Inference Target</div>
-                <div class="text-base font-bold text-white mt-1">OpenCV / Mediapipe</div>
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">Occlusion Support</div>
+                <div class="text-base font-bold text-white mt-1">100% Mask / Niqab</div>
             </div>
             <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
-                <div class="text-xs text-brand-beige/60 uppercase font-mono">Frame Rate</div>
-                <div class="text-base font-bold text-white mt-1">~35 FPS Low-Latency</div>
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">Anti-Spoofing (PAD)</div>
+                <div class="text-base font-bold text-white mt-1">2D FFT Spectrum</div>
             </div>
             <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
-                <div class="text-xs text-brand-beige/60 uppercase font-mono">Camera Feed</div>
-                <div class="text-base font-bold text-white mt-1">ESP WiFi Stream / RTSP</div>
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">Hardware Control</div>
+                <div class="text-base font-bold text-white mt-1">Open MQTT / ESP32</div>
             </div>
             <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
-                <div class="text-xs text-brand-beige/60 uppercase font-mono">Telemetry Latency</div>
-                <div class="text-base font-bold text-white mt-1">&lt; 45 ms Response</div>
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">Cloud Persistence</div>
+                <div class="text-base font-bold text-white mt-1">SQLite + Drive CSV</div>
             </div>
         </div>
 
-        <!-- Section 1: System Architecture & Vision Pipeline -->
+        <!-- Section 1: The Engineering Problem & Market Benchmark -->
         <section class="space-y-4">
             <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-                <i class="fas fa-eye text-brand-maroon text-lg"></i> 1. Vision Pipeline Architecture
+                <i class="fas fa-exclamation-triangle text-brand-maroon text-lg"></i> 1. Problem Statement & Competitor Analysis
             </h2>
-            <div class="bg-brand-card border border-brand-border p-6 rounded-2xl space-y-4 text-sm text-brand-beige/80 leading-relaxed">
+            <div class="bg-brand-card border border-brand-border p-6 rounded-2xl space-y-4 text-sm text-brand-beige/80">
                 <p>
-                    The Ocular AI architecture bridges edge microcontrollers with real-time host-side Python inference engines to achieve smooth camera telemetry and sub-50ms feedback loops.
+                    Legacy biometric entry systems in Malaysian industrial, medical, and municipal facilities rely on single-subject serial scanning or contact fingerprint scanners[cite: 19, 34, 36]. These solutions create entry queues during shift changes, fail under lower-face occlusions, and require expensive specialized hardware IR camera modules to prevent photo replay spoofs[cite: 21, 22, 36].
                 </p>
-                <ul class="space-y-2 list-disc list-inside text-brand-beige/90">
-                    <li><strong class="text-white">Video Stream Ingestion:</strong> Captures video frames over an HTTP/RTSP stream from an ESP Wi-Fi camera module, buffering frame queues to eliminate jitter.</li>
-                    <li><strong class="text-white">Feature Extraction:</strong> Executes lightweight Mediapipe and OpenCV landmark neural networks to extract spatial matrix coordinates without heavy GPU overhead.</li>
-                    <li><strong class="text-white">Telemetry & Automation Control:</strong> Translates spatial tracking vectors into action triggers sent back to peripheral actuators or logging dashboards.</li>
-                </ul>
+
+                <!-- Comparison Table -->
+                <div class="overflow-x-auto pt-2">
+                    <table class="w-full text-left text-xs border-collapse border border-brand-border">
+                        <thead>
+                            <tr class="bg-brand-dark text-white border-b border-brand-border">
+                                <th class="p-2.5">Metrics Compared</th>
+                                <th class="p-2.5">Hikvision MinMoe</th>
+                                <th class="p-2.5">FingerTec Face ID 5</th>
+                                <th class="p-2.5 text-brand-beigelight bg-brand-maroon/30">Ocular AI TAS (This Build)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-brand-border/60 text-brand-beige/80">
+                            <tr>
+                                <td class="p-2.5 font-bold text-white">Mask / Niqab Match</td>
+                                <td class="p-2.5">Limited / Fails</td>
+                                <td class="p-2.5">Struggles with heavy occlusion</td>
+                                <td class="p-2.5 text-emerald-400 font-bold">Dual-Modal (Face + Periocular)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2.5 font-bold text-white">Anti-Spoofing (PAD)</td>
+                                <td class="p-2.5">Hardware IR Lens</td>
+                                <td class="p-2.5">Software Optical Liveness</td>
+                                <td class="p-2.5 text-emerald-400 font-bold">Software 2D FFT Lattice Analysis</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2.5 font-bold text-white">Scanning Mode</td>
+                                <td class="p-2.5">Serial (1-by-1)</td>
+                                <td class="p-2.5">Serial (1-by-1)</td>
+                                <td class="p-2.5 text-emerald-400 font-bold">Parallel Multi-Subject Tracking</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2.5 font-bold text-white">Hardware Control</td>
+                                <td class="p-2.5">Proprietary Relay</td>
+                                <td class="p-2.5">Closed Cloud SDK</td>
+                                <td class="p-2.5 text-emerald-400 font-bold">Open MQTT (ESP32 / Wokwi)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
-        <!-- Section 2: Visual Demos & Bounding Box Overlays -->
+        <!-- Section 2: 5-Stage Verification & Trust Pipeline -->
         <section class="space-y-4">
             <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-                <i class="fas fa-camera text-brand-maroon text-lg"></i> 2. Tracking Demos & Bounding Box Outputs
+                <i class="fas fa-stream text-brand-maroon text-lg"></i> 2. 5-Stage Inspection & Trust Pipeline
             </h2>
-            <p class="text-sm text-brand-beige/70">
-                Upload your tracking screenshots or demo GIFs (e.g. <code class="text-amber-200">ocular-demo-1.jpg</code>) to your main GitHub folder to feature them below.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Image Placeholder 1 -->
-                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
-                    <div class="h-52 bg-brand-dark rounded-lg flex items-center justify-center border border-brand-border overflow-hidden">
-                        <!-- Replace src with your image path e.g. ../ocular-demo-1.jpg -->
-                        <div class="text-center p-4 text-brand-beige/50">
-                            <i class="fas fa-eye text-3xl mb-2 text-brand-maroon"></i>
-                            <p class="text-xs">Upload tracking screenshot to <br><code class="text-white font-mono">ocular-demo-1.jpg</code></p>
-                        </div>
-                    </div>
-                    <h3 class="text-sm font-bold text-white">Real-Time Spatial Detection Overlay</h3>
-                    <p class="text-xs text-brand-beige/70">
-                        Bounding box coordinates calculated in real time with centroid tracking vector overlays.
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                <!-- Stage 1 -->
+                <div class="bg-brand-card border border-brand-border p-4 rounded-xl space-y-2">
+                    <span class="text-brand-maroon font-mono font-bold text-sm block">STAGE 01</span>
+                    <h3 class="text-white font-bold text-sm">Distance Gate</h3>
+                    <p class="text-brand-beige/70">
+                        Evaluates bounding box spatial ratio to enforce a strictly $\le 2.0\text{m}$ operational zone, discarding far-field background passersby[cite: 28, 53].
                     </p>
                 </div>
-
-                <!-- Image Placeholder 2 -->
-                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
-                    <div class="h-52 bg-brand-dark rounded-lg flex items-center justify-center border border-brand-border overflow-hidden">
-                        <!-- Replace src with your image path e.g. ../ocular-demo-2.jpg -->
-                        <div class="text-center p-4 text-brand-beige/50">
-                            <i class="fas fa-chart-line text-3xl mb-2 text-brand-maroon"></i>
-                            <p class="text-xs">Upload performance graph / interface image to <br><code class="text-white font-mono">ocular-demo-2.jpg</code></p>
-                        </div>
-                    </div>
-                    <h3 class="text-sm font-bold text-white">Telemetry & Latency Telemetry Dashboard</h3>
-                    <p class="text-xs text-brand-beige/70">
-                        Real-time logging of frame process times, detection confidence thresholds, and packet arrival rate over Wi-Fi.
+                <!-- Stage 2 -->
+                <div class="bg-brand-card border border-brand-border p-4 rounded-xl space-y-2">
+                    <span class="text-brand-maroon font-mono font-bold text-sm block">STAGE 02</span>
+                    <h3 class="text-white font-bold text-sm">Quality Inspection</h3>
+                    <p class="text-brand-beige/70">
+                        Computes Laplacian blur variance ($\text{threshold} > 10.0$) and head roll angles ($< 25^\circ$), normalizing lighting via YUV linear luminance scaling[cite: 28, 51].
+                    </p>
+                </div>
+                <!-- Stage 3 -->
+                <div class="bg-brand-card border border-brand-border p-4 rounded-xl space-y-2">
+                    <span class="text-brand-maroon font-mono font-bold text-sm block">STAGE 03</span>
+                    <h3 class="text-white font-bold text-sm">2D FFT Anti-Spoofing</h3>
+                    <p class="text-brand-beige/70">
+                        Applies 2D Fast Fourier Transform on raw face crops. Screen displays (phones/monitors) exhibit distinct high-frequency lattice peak ratios ($> 52.0$), rejecting spoof attacks[cite: 28, 41].
+                    </p>
+                </div>
+                <!-- Stage 4 -->
+                <div class="bg-brand-card border border-brand-border p-4 rounded-xl space-y-2">
+                    <span class="text-brand-maroon font-mono font-bold text-sm block">STAGE 04</span>
+                    <h3 class="text-white font-bold text-sm">Dual Embedding Crop</h3>
+                    <p class="text-brand-beige/70">
+                        Crops full-face and top-55% pericircular (eye/eyebrow) Region of Interest (ROI) into parallel feature vectors via deep MobileFaceNet ONNX embeddings[cite: 29, 45, 46].
+                    </p>
+                </div>
+                <!-- Stage 5 -->
+                <div class="bg-brand-card border border-brand-border p-4 rounded-xl space-y-2 col-span-1 md:col-span-2">
+                    <span class="text-brand-maroon font-mono font-bold text-sm block">STAGE 05</span>
+                    <h3 class="text-white font-bold text-sm">Dynamic Score Fusion & Consensus</h3>
+                    <p class="text-brand-beige/70">
+                        When a lower-face mask is detected, weights shift to $85\%$ Periocular + $15\%$ Full Face[cite: 45]. Reaching 3-frame consensus triggers instant MQTT door unlock, saving localized snapshots and appending to cloud CSV[cite: 27, 29, 42, 44].
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- Section 3: Python Source Code -->
+        <!-- Section 3: Hardware & IoT Actuation Architecture -->
+        <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                <i class="fas fa-microchip text-brand-maroon text-lg"></i> 3. Asynchronous IoT Hardware Wiring (ESP32 + MQTT)
+            </h2>
+            <div class="bg-brand-card border border-brand-border p-6 rounded-2xl space-y-4 text-sm text-brand-beige/80">
+                <p>
+                    Verification results are decoupled from host processing threads via non-blocking asynchronous MQTT dispatches on HiveMQ broker topic <code class="text-amber-200">attendance/door/command</code>[cite: 23, 50].
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+                    <div class="bg-brand-dark p-4 rounded-xl border border-brand-border space-y-2">
+                        <h4 class="font-bold text-white text-sm">ESP32 Pinout & Component Interconnect</h4>
+                        <ul class="space-y-1 text-brand-beige/80 font-mono">
+                            <li>• Pin 18 $\rightarrow$ SG90 Servo Signal ($0^\circ$ Locked / $90^\circ$ Unlocked)[cite: 23]</li>
+                            <li>• Pin 19 $\rightarrow$ Green LED Array (Access Granted Indicator)[cite: 23, 50]</li>
+                            <li>• Pin 21 $\rightarrow$ Red LED Array (Locked / Access Denied Indicator)[cite: 23, 50]</li>
+                            <li>• Protocol $\rightarrow$ Asynchronous PubSubClient over Wi-Fi[cite: 23, 50]</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-brand-dark p-4 rounded-xl border border-brand-border space-y-2">
+                        <h4 class="font-bold text-white text-sm">Cloud Data Persistence Loop</h4>
+                        <ul class="space-y-1 text-brand-beige/80 font-mono">
+                            <li>• Primary Storage $\rightarrow$ Local SQLite <code class="text-amber-200">attendance.db</code>[cite: 27, 42]</li>
+                            <li>• Sync Pipeline $\rightarrow$ Google Drive Desktop auto-sync[cite: 27, 42]</li>
+                            <li>• CSV Stream $\rightarrow$ <code class="text-amber-200">attendance_YYYY-MM-DD.csv</code> with <code class="text-emerald-400">os.fsync</code> buffer flush[cite: 39, 42]</li>
+                            <li>• Anti-Redundancy $\rightarrow$ 8-second subject cooldown[cite: 27, 29, 44]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Code Architecture Showcase -->
         <section class="space-y-4">
             <div class="flex justify-between items-center">
                 <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-                    <i class="fas fa-code text-brand-maroon text-lg"></i> 3. Inference Engine Script (Python / OpenCV)
+                    <i class="fas fa-code text-brand-maroon text-lg"></i> 4. Modular Engine Code Structure
                 </h2>
                 <a href="https://github.com/therealeqwan1822-a11y/muhammadikhwannazeri.github.io" target="_blank" class="text-xs text-brand-beigelight bg-brand-maroon/30 px-3 py-1.5 rounded-lg border border-brand-maroon/50 hover:bg-brand-maroon hover:text-white transition-colors flex items-center gap-1.5">
                     <i class="fab fa-github"></i> Repository Code
                 </a>
             </div>
 
-            <div class="bg-brand-card border border-brand-border rounded-xl p-4">
+            <!-- Snippet 1: 2D FFT Anti-Spoofing -->
+            <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-2">
+                <div class="flex justify-between text-xs text-brand-beige/70 font-mono">
+                    <span>anti_spoof.py — Frequency Spectrum Analysis</span>
+                    <span class="text-amber-200">Zero IR Hardware Cost</span>
+                </div>
                 <pre class="bg-black/70 p-4 rounded-lg text-emerald-400 font-mono text-xs overflow-x-auto leading-relaxed border border-brand-border/60">
-# ====================================================================
-# Project: Ocular AI Vision Inference Pipeline
-# Author: Muhammad Ikhwan Bin Nazeri
-# Frameworks: OpenCV / Mediapipe / ESP WiFi Stream
-# ====================================================================
-
+# 2D Fast Fourier Transform Screen Replay Attack Detector
 import cv2
-import time
 import numpy as np
 
-# ESP32-CAM Wi-Fi Stream Endpoint
-stream_url = "http://192.168.1.100:81/stream"
-cap = cv2.VideoCapture(stream_url)
+def inspect_face_roi(self, raw_face_bgr):
+    resized = cv2.resize(raw_face_bgr, (128, 128))
+    gray = cv2.cvtColor(resized, cv2.COLOR_BGR2GRAY)
+    smoothed = cv2.GaussianBlur(gray, (3, 3), 0)
 
-prev_frame_time = 0
+    # Compute 2D Fourier Transform
+    f_transform = np.fft.fft2(smoothed.astype(np.float32))
+    f_shift = np.fft.fftshift(f_transform)
+    magnitude_spectrum = np.abs(f_shift)
 
-while cap.isOpened():
-    ret, frame = cap.read()
-    if not ret:
-        print("[ERROR] Camera stream disconnected. Retrying...")
-        break
+    # Zero out low frequencies (DC component)
+    cy, cx = 64, 64
+    magnitude_spectrum[cy - 16:cy + 16, cx - 16:cx + 16] = 0.0
 
-    # Spatial Feature Processing
-    h, w, c = frame.shape
-    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    peak_ratio = np.max(magnitude_spectrum) / (np.mean(magnitude_spectrum) + 1e-6)
 
-    # Frame Rate (FPS) Calculation
-    new_frame_time = time.time()
-    fps = 1 / (new_frame_time - prev_frame_time) if prev_frame_time != 0 else 0
-    prev_frame_time = new_frame_time
+    # Periodic digital display screen lattice triggers peak spike (> 52.0)
+    if peak_ratio > 52.0:
+        return True, f"SCREEN_DISPLAY_GRID ({peak_ratio:.1f} > 52.0)"
+    return False, "LIVE_REAL_SUBJECT"</pre>
+            </div>
 
-    # Display Overlay
-    cv2.putText(frame, f"FPS: {int(fps)}", (20, 40), 
-                cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
+            <!-- Snippet 2: Dynamic Score Fusion -->
+            <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-2">
+                <div class="flex justify-between text-xs text-brand-beige/70 font-mono">
+                    <span>face_matcher.py — Adaptive Score Fusion</span>
+                    <span class="text-amber-200">Mask & Niqab Resilience</span>
+                </div>
+                <pre class="bg-black/70 p-4 rounded-lg text-emerald-400 font-mono text-xs overflow-x-auto leading-relaxed border border-brand-border/60">
+def fuse_scores(self, score_full, score_perio, occlusion_state):
+    if occlusion_state == "MASK_OCCLUDED":
+        # Rely heavily on pericircular eye region when lower face is covered
+        fused_score = (0.15 * score_full) + (0.85 * score_perio)
+        mode = "PERIOCULAR_FUSED"
+    else:
+        # Prioritize full face embedding when unobstructed
+        fused_score = (0.85 * score_full) + (0.15 * score_perio)
+        mode = "FULL_FACE_PRIMARY"
 
-    cv2.imshow("Ocular AI Vision Feed", frame)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-cap.release()
-cv2.destroyAllWindows()</pre>
+    return fused_score, mode, score_full, score_perio</pre>
             </div>
         </section>
 

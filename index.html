@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Ikhwan | Hardware & Embedded Engineering Portfolio</title>
+    <title>Ocular AI TAS | Embedded Vision & IoT Engineering</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -29,261 +29,328 @@
 </head>
 <body class="bg-brand-dark text-brand-beige font-sans antialiased selection:bg-brand-maroon selection:text-brand-beigelight">
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-wider text-white">
-                PROFESSIONAL <span class="text-brand-beige">PORTFOLIO</span>
+    <!-- Top Navigation -->
+    <nav class="w-full bg-brand-dark/90 border-b border-brand-border py-4 px-6 fixed top-0 z-50 backdrop-blur-md">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-sm font-semibold text-brand-beige hover:text-white flex items-center gap-2 transition-colors">
+                <i class="fas fa-arrow-left"></i> Back to Main Portfolio
             </a>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-brand-beige/80">
-                <a href="#about" class="hover:text-white transition-colors">About</a>
-                <a href="#skills" class="hover:text-white transition-colors">Skills</a>
-                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
-                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
-            </div>
-            <a href="#contact" class="bg-brand-maroon/20 border border-brand-maroon text-brand-beigelight px-4 py-2 rounded-lg text-sm font-semibold hover:bg-brand-maroon hover:text-white transition-all">
-                Contact Me
-            </a>
+            <span class="text-xs font-mono text-brand-beigelight bg-brand-maroon/30 px-3 py-1 rounded-full border border-brand-maroon/40">
+                Computer Vision & Edge IoT
+            </span>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="about" class="pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
-        <div class="flex-1 space-y-6">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
-                Muhammad Ikhwan <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-beigelight via-brand-beige to-amber-200">
-                    Bin Nazeri
-                </span>
+    <!-- Page Content -->
+    <main class="max-w-5xl mx-auto pt-28 pb-20 px-6 space-y-12">
+        
+        <!-- Header & Summary Banner -->
+        <div class="space-y-4 bg-brand-card border border-brand-border p-6 rounded-2xl">
+            <div class="inline-block px-3 py-1 rounded-full bg-brand-maroon/20 border border-brand-maroon/40 text-brand-beigelight text-xs font-mono">
+                Dual-Modal Ocular Verification & Asynchronous Access Control
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+                Ocular AI Time & Attendance System (Ocular AI TAS)
             </h1>
-            <p class="text-lg text-brand-beige/80 max-w-xl leading-relaxed">
-                3rd-Year Electrical & Electronic Engineering Undergraduate at UPM (CGPA 3.67). Specializing in VHDL/RTL digital logic design, embedded IoT architectures, and bench-level hardware debugging.
+            <p class="text-brand-beige/80 text-sm md:text-base leading-relaxed">
+                An industrial-grade computer vision and edge IoT ecosystem designed to eliminate workplace entry bottlenecks and lower-face occlusion failures (masks, niqabs, prescription glasses)[cite: 19, 36]. Built with software-based 2D FFT presentation attack detection (PAD), multi-subject Euclidean centroid tracking, dynamic periocular score fusion, HiveMQ MQTT telemetry, and real-time cloud database logging[cite: 22, 23, 27, 41, 42, 45, 50, 53].
             </p>
-            <div class="flex flex-wrap gap-4 pt-2">
-                <a href="#projects" class="px-6 py-3 bg-gradient-to-r from-brand-maroon to-red-900 text-white font-bold rounded-lg hover:opacity-90 transition-opacity shadow-lg shadow-brand-maroon/20">
-                    View Technical Projects
-                </a>
-                <a href="http://www.linkedin.com/in/muhammad-ikhwan-nazeri-a5b815327" target="_blank" class="px-6 py-3 bg-brand-card border border-brand-border text-white font-semibold rounded-lg hover:border-brand-maroon transition-colors flex items-center gap-2">
-                    <i class="fab font-semibold fa-linkedin text-brand-beige"></i> LinkedIn
-                </a>
+        </div>
+
+        <!-- System Key Performance Indicators (KPIs) -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">Occlusion Support</div>
+                <div class="text-base font-bold text-white mt-1">100% Mask / Niqab</div>
+            </div>
+            <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">Anti-Spoofing (PAD)</div>
+                <div class="text-base font-bold text-white mt-1">2D FFT Spectrum</div>
+            </div>
+            <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">Hardware Control</div>
+                <div class="text-base font-bold text-white mt-1">Open MQTT / ESP32</div>
+            </div>
+            <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">Cloud Persistence</div>
+                <div class="text-base font-bold text-white mt-1">SQLite + Drive CSV</div>
             </div>
         </div>
-        <div class="relative">
-            <div class="w-64 h-64 md:w-80 md:h-80 rounded-2xl bg-gradient-to-tr from-brand-maroon to-amber-100/20 p-1 shadow-2xl shadow-brand-maroon/20">
-                <div class="w-full h-full bg-brand-card rounded-2xl flex flex-col items-center justify-center p-6 text-center border border-brand-border">
-                    <i class="fas fa-microchip text-6xl text-brand-beige mb-4"></i>
-                    <h3 class="text-xl font-bold text-white">Test & Digital Design</h3>
-                    <p class="text-xs text-brand-beige/70 mt-2">FPGA RTL • Embedded IoT • Signal Telemetry</p>
+
+        <!-- Section 1: Live System Demonstration & Visual Results -->
+        <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                <i class="fas fa-desktop text-brand-maroon text-lg"></i> 1. Live System Verification & Hardware Testbench
+            </h2>
+            <p class="text-sm text-brand-beige/80 leading-relaxed">
+                Real-time execution of the Python inference engine integrated with virtual/physical ESP32 hardware via MQTT messaging[cite: 26, 31, 50, 53].
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Image 1: Masked Verification + ESP32 Lock -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <div class="rounded-lg overflow-hidden border border-brand-border bg-black">
+                        <img src="../Screenshot%202026-09-27%20115652.jpg" alt="Ocular AI Masked Verification" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-sm font-bold text-white">Masked Periocular Verification</h3>
+                        <span class="text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800/60 px-2 py-0.5 rounded font-mono">Live Demo</span>
+                    </div>
+                    <p class="text-xs text-brand-beige/70">
+                        System successfully identifies subject under lower-face mask occlusion using upper periocular vectors[cite: 23, 31]. Triggers instant MQTT unlock command to ESP32 servo motor and green status LED[cite: 23, 31].
+                    </p>
+                </div>
+
+                <!-- Image 2: Anti-Spoof Replay Attack Test -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <div class="rounded-lg overflow-hidden border border-brand-border bg-black">
+                        <img src="../Screenshot%202026-09-27%20115015.jpg" alt="Anti-Spoof Replay Attack Test" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-sm font-bold text-white">Presentation Attack Rejection</h3>
+                        <span class="text-[10px] bg-red-950 text-red-400 border border-red-800/60 px-2 py-0.5 rounded font-mono">Anti-Spoof Active</span>
+                    </div>
+                    <p class="text-xs text-brand-beige/70">
+                        Phone screen display attack evaluated via 2D FFT spectrum analysis[cite: 28, 30, 41]. Periodic screen lattice spikes are rejected, keeping the ESP32 door lock secured[cite: 28, 30, 41].
+                    </p>
+                </div>
+
+                <!-- Image 3: Dual-Consensus Real-Time Tracking -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <div class="rounded-lg overflow-hidden border border-brand-border bg-black">
+                        <img src="../Screenshot%202026-09-27%20115454.jpg" alt="Dual Consensus Real Time Tracking" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-sm font-bold text-white">Dual-Consensus Tracking Engine</h3>
+                        <span class="text-[10px] bg-amber-950 text-amber-400 border border-amber-800/60 px-2 py-0.5 rounded font-mono">Real-Time HUD</span>
+                    </div>
+                    <p class="text-xs text-brand-beige/70">
+                        Real-time tracking HUD displaying active confidence metrics ($\text{P: } 0.53, \text{F: } 0.66, \text{C: } 0.61$)[cite: 32]. Enforces 3-frame consensus before logging to prevent transient false positives[cite: 27, 44].
+                    </p>
+                </div>
+
+                <!-- Image 4: Live Cloud CSV Log -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <div class="rounded-lg overflow-hidden border border-brand-border bg-black">
+                        <img src="../Screenshot%202026-09-28%20131257.png" alt="Google Drive Attendance CSV Log Telemetry" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-sm font-bold text-white">Google Drive Cloud CSV Telemetry</h3>
+                        <span class="text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800/60 px-2 py-0.5 rounded font-mono">Cloud Sync</span>
+                    </div>
+                    <p class="text-xs text-brand-beige/70">
+                        Automated CSV append loop executing atomic buffer flushes directly to Google Drive cloud folder[cite: 42, 54]. Logs timestamp, User ID, Full Score, Periocular Score, and Fused Score[cite: 42, 54].
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Technical Skills Section -->
-    <section id="skills" class="py-20 bg-brand-card/40 border-y border-brand-border px-6">
-        <div class="max-w-6xl mx-auto space-y-12">
-            <div class="text-center space-y-3">
-                <h2 class="text-3xl font-bold text-white">Technical Core</h2>
-                <p class="text-brand-beige/70 text-sm">Tools and platforms I work with in hardware and software design.</p>
+        <!-- Section 2: Problem Statement & Competitor Analysis -->
+        <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                <i class="fas fa-exclamation-triangle text-brand-maroon text-lg"></i> 2. Problem Statement & Competitor Analysis
+            </h2>
+            <div class="bg-brand-card border border-brand-border p-6 rounded-2xl space-y-4 text-sm text-brand-beige/80">
+                <p>
+                    Legacy biometric entry systems in Malaysian industrial, medical, and municipal facilities rely on single-subject serial scanning or contact fingerprint scanners[cite: 19, 34, 36]. These solutions create entry queues during shift changes, fail under lower-face occlusions, and require expensive specialized hardware IR camera modules to prevent photo replay spoofs[cite: 21, 22, 36].
+                </p>
+
+                <!-- Comparison Table -->
+                <div class="overflow-x-auto pt-2">
+                    <table class="w-full text-left text-xs border-collapse border border-brand-border">
+                        <thead>
+                            <tr class="bg-brand-dark text-white border-b border-brand-border">
+                                <th class="p-2.5">Metrics Compared</th>
+                                <th class="p-2.5">Hikvision MinMoe</th>
+                                <th class="p-2.5">FingerTec Face ID 5</th>
+                                <th class="p-2.5 text-brand-beigelight bg-brand-maroon/30">Ocular AI TAS (This Build)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-brand-border/60 text-brand-beige/80">
+                            <tr>
+                                <td class="p-2.5 font-bold text-white">Mask / Niqab Match</td>
+                                <td class="p-2.5">Limited / Fails</td>
+                                <td class="p-2.5">Struggles with heavy occlusion</td>
+                                <td class="p-2.5 text-emerald-400 font-bold">Dual-Modal (Face + Periocular)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2.5 font-bold text-white">Anti-Spoofing (PAD)</td>
+                                <td class="p-2.5">Hardware IR Lens</td>
+                                <td class="p-2.5">Software Optical Liveness</td>
+                                <td class="p-2.5 text-emerald-400 font-bold">Software 2D FFT Lattice Analysis</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2.5 font-bold text-white">Scanning Mode</td>
+                                <td class="p-2.5">Serial (1-by-1)</td>
+                                <td class="p-2.5">Serial (1-by-1)</td>
+                                <td class="p-2.5 text-emerald-400 font-bold">Parallel Multi-Subject Tracking</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2.5 font-bold text-white">Hardware Control</td>
+                                <td class="p-2.5">Proprietary Relay</td>
+                                <td class="p-2.5">Closed Cloud SDK</td>
+                                <td class="p-2.5 text-emerald-400 font-bold">Open MQTT (ESP32 / Wokwi)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+        </section>
+
+        <!-- Section 3: 5-Stage Verification & Trust Pipeline -->
+        <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                <i class="fas fa-stream text-brand-maroon text-lg"></i> 3. 5-Stage Inspection & Trust Pipeline
+            </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Skill Card 1 -->
-                <div class="bg-brand-card border border-brand-border p-6 rounded-xl space-y-4">
-                    <div class="w-12 h-12 rounded-lg bg-brand-maroon/20 flex items-center justify-center text-brand-beige text-xl border border-brand-maroon/30">
-                        <i class="fas fa-microchip"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white">Hardware & HDL</h3>
-                    <ul class="space-y-2 text-sm text-brand-beige/80">
-                        <li>• VHDL & Verilog (RTL Design)</li>
-                        <li>• Intel DE2-115 FPGA & Quartus Prime</li>
-                        <li>• LTSpice & Circuit Simulation</li>
-                        <li>• Bench Equipment (Oscilloscopes, DMMs)</li>
-                    </ul>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                <!-- Stage 1 -->
+                <div class="bg-brand-card border border-brand-border p-4 rounded-xl space-y-2">
+                    <span class="text-brand-maroon font-mono font-bold text-sm block">STAGE 01</span>
+                    <h3 class="text-white font-bold text-sm">Distance Gate</h3>
+                    <p class="text-brand-beige/70">
+                        Evaluates bounding box spatial ratio to enforce a strictly $\le 2.0\text{m}$ operational zone, discarding far-field background passersby[cite: 28, 53].
+                    </p>
                 </div>
-
-                <!-- Skill Card 2 -->
-                <div class="bg-brand-card border border-brand-border p-6 rounded-xl space-y-4">
-                    <div class="w-12 h-12 rounded-lg bg-brand-maroon/20 flex items-center justify-center text-brand-beige text-xl border border-brand-maroon/30">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white">Programming & AI</h3>
-                    <ul class="space-y-2 text-sm text-brand-beige/80">
-                        <li>• Python & C++ Development</li>
-                        <li>• OpenCV & Mediapipe Vision AI</li>
-                        <li>• MATLAB & Numerical Computing</li>
-                        <li>• PowerShell & Automation Scripts</li>
-                    </ul>
+                <!-- Stage 2 -->
+                <div class="bg-brand-card border border-brand-border p-4 rounded-xl space-y-2">
+                    <span class="text-brand-maroon font-mono font-bold text-sm block">STAGE 02</span>
+                    <h3 class="text-white font-bold text-sm">Quality Inspection</h3>
+                    <p class="text-brand-beige/70">
+                        Computes Laplacian blur variance ($\text{threshold} > 10.0$) and head roll angles ($< 25^\circ$), normalizing lighting via YUV linear luminance scaling[cite: 28, 51].
+                    </p>
                 </div>
-
-                <!-- Skill Card 3 -->
-                <div class="bg-brand-card border border-brand-border p-6 rounded-xl space-y-4">
-                    <div class="w-12 h-12 rounded-lg bg-brand-maroon/20 flex items-center justify-center text-brand-beige text-xl border border-brand-maroon/30">
-                        <i class="fas fa-wifi"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white">Embedded Systems & CAD</h3>
-                    <ul class="space-y-2 text-sm text-brand-beige/80">
-                        <li>• ESP32 / ESP WiFi Microcontrollers</li>
-                        <li>• Sensor Data Acquisition Pipelines</li>
-                        <li>• AutoCAD Fusion & SolidWorks</li>
-                        <li>• PowerBI & Data Analytics</li>
-                    </ul>
+                <!-- Stage 3 -->
+                <div class="bg-brand-card border border-brand-border p-4 rounded-xl space-y-2">
+                    <span class="text-brand-maroon font-mono font-bold text-sm block">STAGE 03</span>
+                    <h3 class="text-white font-bold text-sm">2D FFT Anti-Spoofing</h3>
+                    <p class="text-brand-beige/70">
+                        Applies 2D Fast Fourier Transform on raw face crops. Screen displays (phones/monitors) exhibit distinct high-frequency lattice peak ratios ($> 52.0$), rejecting spoof attacks[cite: 28, 41].
+                    </p>
+                </div>
+                <!-- Stage 4 -->
+                <div class="bg-brand-card border border-brand-border p-4 rounded-xl space-y-2">
+                    <span class="text-brand-maroon font-mono font-bold text-sm block">STAGE 04</span>
+                    <h3 class="text-white font-bold text-sm">Dual Embedding Crop</h3>
+                    <p class="text-brand-beige/70">
+                        Crops full-face and top-55% pericircular (eye/eyebrow) Region of Interest (ROI) into parallel feature vectors via deep MobileFaceNet ONNX embeddings[cite: 29, 45, 46].
+                    </p>
+                </div>
+                <!-- Stage 5 -->
+                <div class="bg-brand-card border border-brand-border p-4 rounded-xl space-y-2 col-span-1 md:col-span-2">
+                    <span class="text-brand-maroon font-mono font-bold text-sm block">STAGE 05</span>
+                    <h3 class="text-white font-bold text-sm">Dynamic Score Fusion & Consensus</h3>
+                    <p class="text-brand-beige/70">
+                        When a lower-face mask is detected, weights shift to $85\%$ Periocular + $15\%$ Full Face[cite: 45]. Reaching 3-frame consensus triggers instant MQTT door unlock, saving localized snapshots and appending to cloud CSV[cite: 27, 29, 42, 44].
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
- <!-- Featured Projects Section -->
-<section id="projects" class="space-y-8">
-    <div>
-        <h2 class="text-3xl font-bold text-white">Featured Projects</h2>
-        <p class="text-brand-beige/70 text-sm mt-1">Selected engineering builds in hardware synthesis, embedded AI, and logic design.</p>
-    </div>
-
-    <!-- Project Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- PROJECT 1: Tic-Tac-Toe FPGA -->
-        <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between hover:border-brand-maroon/60 transition-colors">
-            <div class="space-y-4">
-                <div class="flex justify-between items-center">
-                    <span class="text-xs font-mono text-brand-maroon bg-brand-maroon/20 px-2.5 py-1 rounded-full border border-brand-maroon/40">
-                        VHDL / RTL
-                    </span>
-                    <i class="fas fa-gamepad text-brand-beige/40"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white">Tic-Tac-Toe Game on Intel DE2-115 FPGA</h3>
-                <p class="text-brand-beige/80 text-xs leading-relaxed">
-                    Designed and synthesized a hardware digital Tic-Tac-Toe game in VHDL. Built custom Finite State Machine (FSM) control logic to validate board moves, control turn sequences, and check win/draw logic.
+        <!-- Section 4: Hardware & IoT Actuation Architecture -->
+        <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                <i class="fas fa-microchip text-brand-maroon text-lg"></i> 4. Asynchronous IoT Hardware Wiring (ESP32 + MQTT)
+            </h2>
+            <div class="bg-brand-card border border-brand-border p-6 rounded-2xl space-y-4 text-sm text-brand-beige/80">
+                <p>
+                    Verification results are decoupled from host processing threads via non-blocking asynchronous MQTT dispatches on HiveMQ broker topic <code class="text-amber-200">attendance/door/command</code>[cite: 23, 50].
                 </p>
-                <div class="flex flex-wrap gap-2 text-[11px] font-mono text-brand-beige/70">
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">VHDL</span>
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Intel DE2-115</span>
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Quartus Prime</span>
-                </div>
-            </div>
-
-            <!-- BUTTON NESTED INSIDE CARD -->
-            <a href="projects/fpga-tic-tac-toe.html" class="mt-6 block text-center py-2.5 bg-brand-maroon text-white font-semibold rounded-lg text-xs hover:opacity-90 transition-opacity shadow-md">
-                View Detailed Writeup & Code →
-            </a>
-        </div>
-
-        <!-- PROJECT 2: Ocular AI Vision System -->
-        <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between hover:border-brand-maroon/60 transition-colors">
-            <div class="space-y-4">
-                <div class="flex justify-between items-center">
-                    <span class="text-xs font-mono text-brand-maroon bg-brand-maroon/20 px-2.5 py-1 rounded-full border border-brand-maroon/40">
-                        Computer Vision
-                    </span>
-                    <i class="fas fa-eye text-brand-beige/40"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white">Ocular AI Vision System</h3>
-                <p class="text-brand-beige/80 text-xs leading-relaxed">
-                    Engineered an end-to-end computer vision pipeline running low-latency inference scripts for real-time object tracking, visual data classification, and automated camera telemetry.
-                </p>
-                <div class="flex flex-wrap gap-2 text-[11px] font-mono text-brand-beige/70">
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Python</span>
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">OpenCV</span>
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Mediapipe</span>
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">ESP WiFi</span>
-                </div>
-            </div>
-
-            <!-- BUTTON NESTED INSIDE CARD -->
-            <a href="projects/ocular-ai.html" class="mt-6 block text-center py-2.5 bg-brand-maroon text-white font-semibold rounded-lg text-xs hover:opacity-90 transition-opacity shadow-md">
-                View Detailed Writeup & Code →
-            </a>
-        </div>
-
-        <!-- PROJECT 3: PainAlert Hospice Monitoring -->
-        <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between hover:border-brand-maroon/60 transition-colors">
-            <div class="space-y-4">
-                <div class="flex justify-between items-center">
-                    <span class="text-xs font-mono text-brand-maroon bg-brand-maroon/20 px-2.5 py-1 rounded-full border border-brand-maroon/40">
-                        Embedded IoT
-                    </span>
-                    <i class="fas fa-heartbeat text-brand-beige/40"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white">PainAlert Hospice Monitoring</h3>
-                <p class="text-brand-beige/80 text-xs leading-relaxed">
-                    Integrated ESP WiFi microcontrollers and vision classification models in Google Colab to observe expressions in hospice care, transmitting real-time alert signals to caregiver displays.
-                </p>
-                <div class="flex flex-wrap gap-2 text-[11px] font-mono text-brand-beige/70">
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">ESP32</span>
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">Google Colab</span>
-                    <span class="bg-brand-dark px-2 py-0.5 rounded border border-brand-border">IoT Telemetry</span>
-                </div>
-            </div>
-
-            <!-- BUTTON NESTED INSIDE CARD -->
-            <a href="#" class="mt-6 block text-center py-2.5 bg-brand-dark text-brand-beige/60 font-semibold rounded-lg text-xs border border-brand-border hover:text-white transition-colors">
-                Writeup Coming Soon
-            </a>
-        </div>
-
-    </div>
-</section>
-
-    <!-- Experience & Leadership Section -->
-    <section id="experience" class="py-20 bg-brand-card/40 border-t border-brand-border px-6">
-        <div class="max-w-6xl mx-auto space-y-12">
-            <div class="space-y-3">
-                <h2 class="text-3xl font-bold text-white">Leadership & Experience</h2>
-                <p class="text-brand-beige/70 text-sm">Hands-on experience in committee operations, technical fault isolation, and mechanical diagnostics.</p>
-            </div>
-
-            <div class="space-y-6">
-                <!-- Exp 1 -->
-                <div class="bg-brand-card border border-brand-border p-6 rounded-xl flex flex-col md:flex-row justify-between md:items-center gap-4">
-                    <div>
-                        <h3 class="text-lg font-bold text-white">Committee Member</h3>
-                        <p class="text-brand-beige font-medium text-sm">IEEE Student Branch UPM</p>
-                        <p class="text-brand-beige/70 text-xs mt-1 max-w-2xl leading-relaxed">
-                            Coordinated operational logistics for technical workshops and student development events. Managed digital publicity and collaborated with leads to connect engineering undergraduates with industry professionals.
-                        </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+                    <div class="bg-brand-dark p-4 rounded-xl border border-brand-border space-y-2">
+                        <h4 class="font-bold text-white text-sm">ESP32 Pinout & Component Interconnect</h4>
+                        <ul class="space-y-1 text-brand-beige/80 font-mono">
+                            <li>• Pin 18 $\rightarrow$ SG90 Servo Signal ($0^\circ$ Locked / $90^\circ$ Unlocked)[cite: 23]</li>
+                            <li>• Pin 19 $\rightarrow$ Green LED Array (Access Granted Indicator)[cite: 23, 50]</li>
+                            <li>• Pin 21 $\rightarrow$ Red LED Array (Locked / Access Denied Indicator)[cite: 23, 50]</li>
+                            <li>• Protocol $\rightarrow$ Asynchronous PubSubClient over Wi-Fi[cite: 23, 50]</li>
+                        </ul>
                     </div>
-                    <span class="text-xs font-mono text-brand-beige/80 border border-brand-border px-3 py-1 rounded-full whitespace-nowrap w-fit">2025 – 2026</span>
-                </div>
 
-                <!-- Exp 2 -->
-                <div class="bg-brand-card border border-brand-border p-6 rounded-xl flex flex-col md:flex-row justify-between md:items-center gap-4">
-                    <div>
-                        <h3 class="text-lg font-bold text-white">Technical Coordinator & Head Referee</h3>
-                        <p class="text-brand-beige font-medium text-sm">International Youth Robot Competition (IYRC) ASEAN</p>
-                        <p class="text-brand-beige/70 text-xs mt-1 max-w-2xl leading-relaxed">
-                            Managed rule enforcement and rapid live-bench troubleshooting for unexpected hardware and software failures during international competition matches.
-                        </p>
+                    <div class="bg-brand-dark p-4 rounded-xl border border-brand-border space-y-2">
+                        <h4 class="font-bold text-white text-sm">Cloud Data Persistence Loop</h4>
+                        <ul class="space-y-1 text-brand-beige/80 font-mono">
+                            <li>• Primary Storage $\rightarrow$ Local SQLite <code class="text-amber-200">attendance.db</code>[cite: 27, 42]</li>
+                            <li>• Sync Pipeline $\rightarrow$ Google Drive Desktop auto-sync[cite: 27, 42]</li>
+                            <li>• CSV Stream $\rightarrow$ <code class="text-amber-200">attendance_YYYY-MM-DD.csv</code> with <code class="text-emerald-400">os.fsync</code> buffer flush[cite: 39, 42]</li>
+                            <li>• Anti-Redundancy $\rightarrow$ 8-second subject cooldown[cite: 27, 29, 44]</li>
+                        </ul>
                     </div>
-                    <span class="text-xs font-mono text-brand-beige/80 border border-brand-border px-3 py-1 rounded-full whitespace-nowrap w-fit">2026</span>
-                </div>
-
-                <!-- Exp 3 -->
-                <div class="bg-brand-card border border-brand-border p-6 rounded-xl flex flex-col md:flex-row justify-between md:items-center gap-4">
-                    <div>
-                        <h3 class="text-lg font-bold text-white">Automotive Mechanic Assistant (Part-Time)</h3>
-                        <p class="text-brand-beige font-medium text-sm">Rnaz Auto, Johor</p>
-                        <p class="text-brand-beige/70 text-xs mt-1 max-w-2xl leading-relaxed">
-                            Diagnosed mechanical malfunctions, executed fault isolation, and performed system maintenance on vehicles to ensure strict safety and performance standards.
-                        </p>
-                    </div>
-                    <span class="text-xs font-mono text-brand-beige/80 border border-brand-border px-3 py-1 rounded-full whitespace-nowrap w-fit">2023 – 2026</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer / Contact -->
-    <footer id="contact" class="py-16 px-6 border-t border-brand-border text-center space-y-6">
-        <h2 class="text-2xl font-bold text-white">Get In Touch</h2>
-        <p class="text-brand-beige/80 text-sm max-w-md mx-auto">
-            Open for Electrical & Electronic Engineering internship placements from <strong class="text-white">July 2026 – October 2026</strong>.
-        </p>
-        <div class="flex justify-center space-x-6 text-xl text-brand-beige">
-            <a href="mailto:wannazzrnaz@gmail.com" class="hover:text-white transition-colors"><i class="fas fa-envelope"></i></a>
-            <a href="http://www.linkedin.com/in/muhammad-ikhwan-nazeri-a5b815327" target="_blank" class="hover:text-white transition-colors"><i class="fab font-semibold fa-linkedin"></i></a>
-        </div>
-        <p class="text-xs text-brand-beige/50 pt-6">© 2026 Muhammad Ikhwan Bin Nazeri. Hosted on GitHub Pages.</p>
+        <!-- Section 5: Code Architecture Showcase -->
+        <section class="space-y-4">
+            <div class="flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                    <i class="fas fa-code text-brand-maroon text-lg"></i> 5. Modular Engine Code Structure
+                </h2>
+                <a href="https://github.com/therealeqwan1822-a11y/muhammadikhwannazeri.github.io" target="_blank" class="text-xs text-brand-beigelight bg-brand-maroon/30 px-3 py-1.5 rounded-lg border border-brand-maroon/50 hover:bg-brand-maroon hover:text-white transition-colors flex items-center gap-1.5">
+                    <i class="fab fa-github"></i> Repository Code
+                </a>
+            </div>
+
+            <!-- Snippet 1: 2D FFT Anti-Spoofing -->
+            <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-2">
+                <div class="flex justify-between text-xs text-brand-beige/70 font-mono">
+                    <span>anti_spoof.py — Frequency Spectrum Analysis</span>
+                    <span class="text-amber-200">Zero IR Hardware Cost</span>
+                </div>
+                <pre class="bg-black/70 p-4 rounded-lg text-emerald-400 font-mono text-xs overflow-x-auto leading-relaxed border border-brand-border/60">
+# 2D Fast Fourier Transform Screen Replay Attack Detector
+import cv2
+import numpy as np
+
+def inspect_face_roi(self, raw_face_bgr):
+    resized = cv2.resize(raw_face_bgr, (128, 128))
+    gray = cv2.cvtColor(resized, cv2.COLOR_BGR2GRAY)
+    smoothed = cv2.GaussianBlur(gray, (3, 3), 0)
+
+    # Compute 2D Fourier Transform
+    f_transform = np.fft.fft2(smoothed.astype(np.float32))
+    f_shift = np.fft.fftshift(f_transform)
+    magnitude_spectrum = np.abs(f_shift)
+
+    # Zero out low frequencies (DC component)
+    cy, cx = 64, 64
+    magnitude_spectrum[cy - 16:cy + 16, cx - 16:cx + 16] = 0.0
+
+    peak_ratio = np.max(magnitude_spectrum) / (np.mean(magnitude_spectrum) + 1e-6)
+
+    # Periodic digital display screen lattice triggers peak spike (> 52.0)
+    if peak_ratio > 52.0:
+        return True, f"SCREEN_DISPLAY_GRID ({peak_ratio:.1f} > 52.0)"
+    return False, "LIVE_REAL_SUBJECT"</pre>
+            </div>
+
+            <!-- Snippet 2: Dynamic Score Fusion -->
+            <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-2">
+                <div class="flex justify-between text-xs text-brand-beige/70 font-mono">
+                    <span>face_matcher.py — Adaptive Score Fusion</span>
+                    <span class="text-amber-200">Mask & Niqab Resilience</span>
+                </div>
+                <pre class="bg-black/70 p-4 rounded-lg text-emerald-400 font-mono text-xs overflow-x-auto leading-relaxed border border-brand-border/60">
+def fuse_scores(self, score_full, score_perio, occlusion_state):
+    if occlusion_state == "MASK_OCCLUDED":
+        # Rely heavily on pericircular eye region when lower face is covered
+        fused_score = (0.15 * score_full) + (0.85 * score_perio)
+        mode = "PERIOCULAR_FUSED"
+    else:
+        # Prioritize full face embedding when unobstructed
+        fused_score = (0.85 * score_full) + (0.15 * score_perio)
+        mode = "FULL_FACE_PRIMARY"
+
+    return fused_score, mode, score_full, score_perio</pre>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 px-6 border-t border-brand-border text-center text-xs text-brand-beige/60">
+        <p>© 2026 Muhammad Ikhwan Bin Nazeri. Hosted on GitHub Pages.</p>
     </footer>
 
 </body>

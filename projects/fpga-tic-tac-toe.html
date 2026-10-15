@@ -44,10 +44,10 @@
     <!-- Page Content -->
     <main class="max-w-5xl mx-auto pt-28 pb-20 px-6 space-y-12">
         
-        <!-- Header & Presentation Banner -->
+        <!-- Header & Hardware Board Presentation Banner -->
         <div class="flex flex-col md:flex-row items-center gap-8 bg-brand-card border border-brand-border p-6 rounded-2xl">
             <div class="w-full md:w-1/3 rounded-xl overflow-hidden border border-brand-border shadow-lg">
-                <img src="../project-picture.jpeg" alt="Muhammad Ikhwan FPGA Presentation" class="w-full h-auto object-cover">
+                <img src="../project-picture.jpeg" alt="Muhammad Ikhwan FPGA Board Demo" class="w-full h-auto object-cover">
             </div>
             <div class="w-full md:w-2/3 space-y-4">
                 <div class="inline-block px-3 py-1 rounded-full bg-brand-maroon/20 border border-brand-maroon/40 text-brand-beigelight text-xs font-mono">
@@ -57,7 +57,7 @@
                     Tic-Tac-Toe Logic Engine on Intel DE2-115 FPGA
                 </h1>
                 <p class="text-brand-beige/80 text-sm leading-relaxed">
-                    A fully custom, modular digital logic architecture synthesized on the Intel DE2-115 FPGA. Features an 8-state FSM controller, real-time illegal move detection matrix, position registers (<code class="text-amber-200">pos1</code>–<code class="text-amber-200">pos9</code>), combinational win-check evaluators, and automated computer opponent play logic.
+                    A fully custom, modular digital logic architecture synthesized on the Intel DE2-115 FPGA board. Features an 8-state FSM controller, real-time illegal move detection matrix, dual position decoders, position registers (<code class="text-amber-200">pos1</code>–<code class="text-amber-200">pos9</code>), combinational win-check evaluators, 16x2 character LCD driver, and automated computer opponent play logic.
                 </p>
                 <div class="text-xs text-brand-beige/60 pt-2 border-t border-brand-border/60 flex flex-wrap gap-4">
                     <span><strong class="text-white">Lecturers:</strong> Prof. Madya Dr. Nasri, Prof. Madya Dr. Maryam, Prof. Madya Dr. Roslina</span>
@@ -80,15 +80,55 @@
                 <div class="text-base font-bold text-white mt-1">IDLE, PLAYER, COMPUTER, GAME_DONE</div>
             </div>
             <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
-                <div class="text-xs text-brand-beige/60 uppercase font-mono">Simulation</div>
-                <div class="text-base font-bold text-white mt-1">ModelSim Verifications</div>
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">Simulation & Bench</div>
+                <div class="text-base font-bold text-white mt-1">ModelSim & DE2 Hardware</div>
             </div>
         </div>
 
-        <!-- Section 1: Top-Level RTL Architecture -->
+        <!-- NEW SECTION: Live Physical DE2-115 Hardware Board Results -->
         <section class="space-y-4">
             <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-                <i class="fas fa-project-diagram text-brand-maroon text-lg"></i> 1. Top-Level RTL Netlist Schematic
+                <i class="fas fa-desktop text-brand-maroon text-lg"></i> 1. Live Hardware Board Verification (DE2-115 Bench Results)
+            </h2>
+            <p class="text-sm text-brand-beige/80 leading-relaxed">
+                Physical hardware execution on the Altera/Intel Cyclone IV DE2-115 development board verifying real-time game status output driven to the onboard 16x2 character LCD and active LED matrix.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Board Result 1: P1 WIN -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <div class="rounded-lg overflow-hidden border border-brand-border bg-black">
+                        <img src="../board-setup-2.jpeg" alt="DE2-115 FPGA Board P1 WIN State" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-sm font-bold text-white">Player 1 Victory State (<code class="text-emerald-400">P1 WIN</code>)</h3>
+                        <span class="text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800/60 px-2 py-0.5 rounded font-mono">Live Hardware</span>
+                    </div>
+                    <p class="text-xs text-brand-beige/70">
+                        Winner detector module asserts <code class="text-white">winner = '1'</code> and identity <code class="text-white">who = 2'b01</code>. The onboard 16x2 LCD display drives the character string <code class="text-amber-200 font-mono">"P1 WIN"</code> while active Red LEDs indicate X coordinates occupied on the 3x3 grid.
+                    </p>
+                </div>
+
+                <!-- Board Result 2: P2 WIN -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <div class="rounded-lg overflow-hidden border border-brand-border bg-black">
+                        <img src="../board-setup-1.jpeg" alt="DE2-115 FPGA Board P2 WIN State" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-sm font-bold text-white">Player 2 / Computer Victory State (<code class="text-amber-300">P2 WIN</code>)</h3>
+                        <span class="text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800/60 px-2 py-0.5 rounded font-mono">Live Hardware</span>
+                    </div>
+                    <p class="text-xs text-brand-beige/70">
+                        Winner detector module asserts victory for Computer/P2 (<code class="text-white">who = 2'b10</code>). The onboard 16x2 LCD display drives <code class="text-amber-200 font-mono">"P2 WIN"</code> with Green LEDs lighting up to show the winning 3-in-a-row combination.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Top-Level RTL Architecture -->
+        <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                <i class="fas fa-project-diagram text-brand-maroon text-lg"></i> 2. Top-Level RTL Netlist Schematic
             </h2>
             <div class="bg-brand-card border border-brand-border p-4 rounded-2xl space-y-3">
                 <img src="../Full%20RTL%20Viewer.jpg" alt="Full Top-Level RTL Schematic" class="w-full h-auto rounded-xl border border-brand-border bg-white">
@@ -98,10 +138,10 @@
             </div>
         </section>
 
-        <!-- Section 2: FSM & State Machine Viewer -->
+        <!-- Section 3: FSM & State Machine Viewer -->
         <section class="space-y-4">
             <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-                <i class="fas fa-random text-brand-maroon text-lg"></i> 2. Finite State Machine (FSM) Execution
+                <i class="fas fa-random text-brand-maroon text-lg"></i> 3. Finite State Machine (FSM) Execution
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
@@ -122,10 +162,36 @@
             </div>
         </section>
 
-        <!-- Section 3: Modular RTL Logic Sub-Blocks -->
+        <!-- Section 4: Position Decoders (Computer vs Player) -->
         <section class="space-y-4">
             <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-                <i class="fas fa-cubes text-brand-maroon text-lg"></i> 3. Detailed Combinational Logic Modules
+                <i class="fas fa-microchip text-brand-maroon text-lg"></i> 4. Position Decoders (<code class="text-amber-200">pd_pc</code> & <code class="text-amber-200">pd_pl</code>)
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Position Decoder Computer -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <img src="../position%20decoder%20comp.jpg" alt="Position Decoder Computer" class="w-full h-auto rounded-lg border border-brand-border bg-white">
+                    <h3 class="text-sm font-bold text-white">Computer Position Decoder (<code class="text-amber-200">position_decoder:pd_pc</code>)</h3>
+                    <p class="text-xs text-brand-beige/70">
+                        Multiplexer decoder matrix decoding 4-bit computer move coordinates into 16-bit register write enable signals.
+                    </p>
+                </div>
+
+                <!-- Position Decoder Player -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <img src="../position%20decoder%20player.jpg" alt="Position Decoder Player" class="w-full h-auto rounded-lg border border-brand-border bg-white">
+                    <h3 class="text-sm font-bold text-white">Player Position Decoder (<code class="text-amber-200">position_decoder:pd_pl</code>)</h3>
+                    <p class="text-xs text-brand-beige/70">
+                        Multiplexer decoder matrix decoding 4-bit human player move coordinates into 16-bit register write enable signals.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Modular RTL Logic Sub-Blocks -->
+        <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                <i class="fas fa-cubes text-brand-maroon text-lg"></i> 5. Detailed Combinational & Memory Logic Modules
             </h2>
 
             <!-- Winner Detector Highlight -->
@@ -137,7 +203,7 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Illegal Move Detector -->
                 <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
                     <img src="../Illegal%20Move%20detector.jpg" alt="Illegal Move Detector schematic" class="w-full h-auto rounded-lg border border-brand-border bg-white">
@@ -164,22 +230,13 @@
                         Array of 9 two-bit D Flip-Flops storing 2-bit state per tile (<code class="text-white">00</code> = Empty, <code class="text-white">01</code> = Player X, <code class="text-white">10</code> = Computer O).
                     </p>
                 </div>
-
-                <!-- Position Decoder -->
-                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
-                    <img src="../position%20decoder%20comp.jpg" alt="Position Decoder schematic" class="w-full h-auto rounded-lg border border-brand-border bg-white">
-                    <h3 class="text-sm font-bold text-white">Position Decoder Matrix (<code class="text-amber-200">position_decoder:pd_pc</code> / <code class="text-amber-200">pd_pl</code>)</h3>
-                    <p class="text-xs text-brand-beige/70">
-                        Multiplexer decoder array converting 4-bit encoded position inputs into 16-bit one-hot register write enable lines.
-                    </p>
-                </div>
             </div>
         </section>
 
-        <!-- Section 4: ModelSim Functional Simulations -->
+        <!-- Section 6: ModelSim Functional Simulations -->
         <section class="space-y-4">
             <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-                <i class="fas fa-wave-square text-brand-maroon text-lg"></i> 4. ModelSim Testbench Verification Waves
+                <i class="fas fa-wave-square text-brand-maroon text-lg"></i> 6. ModelSim Testbench Verification Waves
             </h2>
 
             <div class="space-y-6">

@@ -209,7 +209,7 @@
                     <span class="text-brand-maroon font-mono font-bold text-sm block">STAGE 01</span>
                     <h3 class="text-white font-bold text-sm">Distance Gate</h3>
                     <p class="text-brand-beige/70">
-                        Evaluates bounding box spatial ratio to enforce a strictly $\le 2.0\text{m}$ operational zone, discarding far-field background passersby.
+                        Evaluates bounding box spatial ratio to enforce a strictly 2.0 m operational zone, discarding far-field background passersby.
                     </p>
                 </div>
                 <!-- Stage 2 -->
@@ -217,7 +217,7 @@
                     <span class="text-brand-maroon font-mono font-bold text-sm block">STAGE 02</span>
                     <h3 class="text-white font-bold text-sm">Quality Inspection</h3>
                     <p class="text-brand-beige/70">
-                        Computes Laplacian blur variance ($\text{threshold} > 10.0$) and head roll angles ($< 25^\circ$), normalizing lighting via YUV linear luminance scaling.
+                        Computes Laplacian blur variance (threshold > 10.0) and head roll angles (25 degrees), normalizing lighting via YUV linear luminance scaling.
                     </p>
                 </div>
                 <!-- Stage 3 -->
@@ -225,7 +225,7 @@
                     <span class="text-brand-maroon font-mono font-bold text-sm block">STAGE 03</span>
                     <h3 class="text-white font-bold text-sm">2D FFT Anti-Spoofing</h3>
                     <p class="text-brand-beige/70">
-                        Applies 2D Fast Fourier Transform on raw face crops. Screen displays (phones/monitors) exhibit distinct high-frequency lattice peak ratios ($> 52.0$), rejecting spoof attacks.
+                        Applies 2D Fast Fourier Transform on raw face crops. Screen displays (phones/monitors) exhibit distinct high-frequency lattice peak ratios (> 52.0), rejecting spoof attacks.
                     </p>
                 </div>
                 <!-- Stage 4 -->
@@ -241,7 +241,7 @@
                     <span class="text-brand-maroon font-mono font-bold text-sm block">STAGE 05</span>
                     <h3 class="text-white font-bold text-sm">Dynamic Score Fusion & Consensus</h3>
                     <p class="text-brand-beige/70">
-                        When a lower-face mask is detected, weights shift to $85\%$ Periocular + $15\%$ Full Face. Reaching 3-frame consensus triggers instant MQTT door unlock, saving localized snapshots and appending to cloud CSV.
+                        When a lower-face mask is detected, weights shift to 85% Periocular + 15% Full Face. Reaching 3-frame consensus triggers instant MQTT door unlock, saving localized snapshots and appending to cloud CSV.
                     </p>
                 </div>
             </div>
@@ -261,20 +261,20 @@
                     <div class="bg-brand-dark p-4 rounded-xl border border-brand-border space-y-2">
                         <h4 class="font-bold text-white text-sm">ESP32 Pinout & Component Interconnect</h4>
                         <ul class="space-y-1 text-brand-beige/80 font-mono">
-                            <li>• Pin 18 $\rightarrow$ SG90 Servo Signal ($0^\circ$ Locked / $90^\circ$ Unlocked)</li>
-                            <li>• Pin 19 $\rightarrow$ Green LED Array (Access Granted Indicator)</li>
-                            <li>• Pin 21 $\rightarrow$ Red LED Array (Locked / Access Denied Indicator)</li>
-                            <li>• Protocol $\rightarrow$ Asynchronous PubSubClient over Wi-Fi</li>
+                            <li>• Pin 18 -> SG90 Servo Signal (0 degrees Locked / 90 degrees Unlocked)</li>
+                            <li>• Pin 19 -> Green LED Array (Access Granted Indicator)</li>
+                            <li>• Pin 21 -> Red LED Array (Locked / Access Denied Indicator)</li>
+                            <li>• Protocol -> Asynchronous PubSubClient over Wi-Fi</li>
                         </ul>
                     </div>
 
                     <div class="bg-brand-dark p-4 rounded-xl border border-brand-border space-y-2">
                         <h4 class="font-bold text-white text-sm">Cloud Data Persistence Loop</h4>
                         <ul class="space-y-1 text-brand-beige/80 font-mono">
-                            <li>• Primary Storage $\rightarrow$ Local SQLite <code class="text-amber-200">attendance.db</code></li>
-                            <li>• Sync Pipeline $\rightarrow$ Google Drive Desktop auto-sync</li>
-                            <li>• CSV Stream $\rightarrow$ <code class="text-amber-200">attendance_YYYY-MM-DD.csv</code> with <code class="text-emerald-400">os.fsync</code> buffer flush</li>
-                            <li>• Anti-Redundancy $\rightarrow$ 8-second subject cooldown</li>
+                            <li>• Primary Storage -> Local SQLite <code class="text-amber-200">attendance.db</code></li>
+                            <li>• Sync Pipeline -> Google Drive Desktop auto-sync</li>
+                            <li>• CSV Stream -> <code class="text-amber-200">attendance_YYYY-MM-DD.csv</code> with <code class="text-emerald-400">os.fsync</code> buffer flush</li>
+                            <li>• Anti-Redundancy -> 8-second subject cooldown</li>
                         </ul>
                     </div>
                 </div>

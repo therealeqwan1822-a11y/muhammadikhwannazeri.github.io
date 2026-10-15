@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPGA Tic-Tac-Toe Project Details | Muhammad Ikhwan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#18070a',
+                            card: '#260e13',
+                            border: '#421a22',
+                            maroon: '#9b1c38',
+                            beige: '#e8dbce',
+                            beigelight: '#f7f1ea'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-brand-beige font-sans antialiased">
+
+    <!-- Top Navigation -->
+    <nav class="w-full bg-brand-dark/90 border-b border-brand-border py-4 px-6 fixed top-0 z-50">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-sm font-semibold text-brand-beige hover:text-white flex items-center gap-2">
+                <i class="fas fa-arrow-left"></i> Back to Main Portfolio
+            </a>
+            <span class="text-xs font-mono text-brand-maroon bg-brand-maroon/20 px-3 py-1 rounded-full border border-brand-maroon/40">
+                Hardware & RTL Synthesis
+            </span>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="max-w-4xl mx-auto pt-28 pb-20 px-6 space-y-10">
+        
+        <!-- Header -->
+        <div class="space-y-4">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white">Tic-Tac-Toe Game on Intel DE2-115 FPGA</h1>
+            <p class="text-brand-beige/80 text-base leading-relaxed">
+                Full hardware implementation synthesized using VHDL logic on the Altera/Intel Cyclone IV FPGA target board.
+            </p>
+        </div>
+
+        <!-- Hardware & Test Results Summary -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">Board Target</div>
+                <div class="text-lg font-bold text-white mt-1">Intel DE2-115</div>
+            </div>
+            <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">FSM Architecture</div>
+                <div class="text-lg font-bold text-white mt-1">8 States Control Logic</div>
+            </div>
+            <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">Toolchain</div>
+                <div class="text-lg font-bold text-white mt-1">Quartus Prime / ModelSim</div>
+            </div>
+        </div>
+
+        <!-- Image / Schematic Showcase Section -->
+        <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-white">1. Hardware Setup & Testing Output</h2>
+            <p class="text-sm text-brand-beige/80">Upload your images into an `images/` folder and link them below:</p>
+
+            <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-4">
+                <!-- Replace src with your image path e.g. ../images/fpga-setup.jpg -->
+                <div class="w-full h-64 bg-brand-dark/80 rounded-lg flex items-center justify-center border border-brand-border">
+                    <span class="text-xs text-brand-beige/50"><i class="fas fa-image text-2xl mb-2 block text-center"></i> Place your board setup photo / Quartus pin planner screenshot here</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Source Code Section -->
+        <section class="space-y-4">
+            <div class="flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-white">2. Synthesizable VHDL Logic Code</h2>
+                <a href="https://github.com/muhammadikhwannazeri" target="_blank" class="text-xs text-brand-maroon hover:underline">
+                    View on GitHub <i class="fas fa-external-link-alt ml-1"></i>
+                </a>
+            </div>
+
+            <div class="bg-brand-card border border-brand-border rounded-xl p-4">
+                <pre class="bg-black/60 p-4 rounded-lg text-emerald-400 font-mono text-xs overflow-x-auto leading-relaxed">
+-- Altera/Intel DE2-115 VHDL Finite State Machine
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity tictactoe_fsm is
+    Port (
+        clk      : in  STD_LOGIC;
+        reset    : in  STD_LOGIC;
+        move_btn : in  STD_LOGIC_VECTOR(8 downto 0);
+        win_out  : out STD_LOGIC_VECTOR(1 downto 0)
+    );
+end tictactoe_fsm;
+
+architecture Behavioral of tictactoe_fsm is
+    type state_type is (IDLE, PLAYER_X_TURN, CHECK_X_WIN, PLAYER_O_TURN, CHECK_O_WIN, GAME_OVER);
+    signal current_state, next_state : state_type;
+begin
+    -- State transition process logic here...
+end Behavioral;</pre>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

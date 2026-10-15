@@ -77,10 +77,78 @@
             </div>
         </div>
 
-        <!-- Section 1: Problem Statement & Competitor Analysis -->
+        <!-- Section 1: Live System Demonstration & Visual Results -->
         <section class="space-y-4">
             <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-                <i class="fas fa-exclamation-triangle text-brand-maroon text-lg"></i> 1. Problem Statement & Competitor Analysis
+                <i class="fas fa-desktop text-brand-maroon text-lg"></i> 1. Live System Verification & Hardware Testbench
+            </h2>
+            <p class="text-sm text-brand-beige/80 leading-relaxed">
+                Real-time execution of the Python inference engine integrated with virtual/physical ESP32 hardware via MQTT messaging[cite: 26, 31, 50, 53].
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Image 1: Masked Verification + ESP32 Lock -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <div class="rounded-lg overflow-hidden border border-brand-border bg-black">
+                        <img src="../Screenshot%202026-09-27%20115652.jpg" alt="Ocular AI Masked Verification" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-sm font-bold text-white">Masked Periocular Verification</h3>
+                        <span class="text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800/60 px-2 py-0.5 rounded font-mono">Live Demo</span>
+                    </div>
+                    <p class="text-xs text-brand-beige/70">
+                        System successfully identifies subject under lower-face mask occlusion using upper periocular vectors[cite: 23, 31]. Triggers instant MQTT unlock command to ESP32 servo motor and green status LED[cite: 23, 31].
+                    </p>
+                </div>
+
+                <!-- Image 2: Anti-Spoof Replay Attack Test -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <div class="rounded-lg overflow-hidden border border-brand-border bg-black">
+                        <img src="../Screenshot%202026-09-27%20115015.jpg" alt="Anti-Spoof Replay Attack Test" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-sm font-bold text-white">Presentation Attack Rejection</h3>
+                        <span class="text-[10px] bg-red-950 text-red-400 border border-red-800/60 px-2 py-0.5 rounded font-mono">Anti-Spoof Active</span>
+                    </div>
+                    <p class="text-xs text-brand-beige/70">
+                        Phone screen display attack evaluated via 2D FFT spectrum analysis[cite: 28, 30, 41]. Periodic screen lattice spikes are rejected, keeping the ESP32 door lock secured[cite: 28, 30, 41].
+                    </p>
+                </div>
+
+                <!-- Image 3: Dual-Consensus Real-Time Tracking -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <div class="rounded-lg overflow-hidden border border-brand-border bg-black">
+                        <img src="../Screenshot%202026-09-27%20115454.jpg" alt="Dual Consensus Real Time Tracking" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-sm font-bold text-white">Dual-Consensus Tracking Engine</h3>
+                        <span class="text-[10px] bg-amber-950 text-amber-400 border border-amber-800/60 px-2 py-0.5 rounded font-mono">Real-Time HUD</span>
+                    </div>
+                    <p class="text-xs text-brand-beige/70">
+                        Real-time tracking HUD displaying active confidence metrics ($\text{P: } 0.53, \text{F: } 0.66, \text{C: } 0.61$)[cite: 32]. Enforces 3-frame consensus before logging to prevent transient false positives[cite: 27, 44].
+                    </p>
+                </div>
+
+                <!-- Image 4: Live Cloud CSV Log -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <div class="rounded-lg overflow-hidden border border-brand-border bg-black">
+                        <img src="../Screenshot%202026-09-28%20131257.png" alt="Google Drive Attendance CSV Log Telemetry" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-sm font-bold text-white">Google Drive Cloud CSV Telemetry</h3>
+                        <span class="text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800/60 px-2 py-0.5 rounded font-mono">Cloud Sync</span>
+                    </div>
+                    <p class="text-xs text-brand-beige/70">
+                        Automated CSV append loop executing atomic buffer flushes directly to Google Drive cloud folder[cite: 42, 54]. Logs timestamp, User ID, Full Score, Periocular Score, and Fused Score[cite: 42, 54].
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Problem Statement & Competitor Analysis -->
+        <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                <i class="fas fa-exclamation-triangle text-brand-maroon text-lg"></i> 2. Problem Statement & Competitor Analysis
             </h2>
             <div class="bg-brand-card border border-brand-border p-6 rounded-2xl space-y-4 text-sm text-brand-beige/80">
                 <p>
@@ -129,10 +197,10 @@
             </div>
         </section>
 
-        <!-- Section 2: 5-Stage Verification & Trust Pipeline -->
+        <!-- Section 3: 5-Stage Verification & Trust Pipeline -->
         <section class="space-y-4">
             <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-                <i class="fas fa-stream text-brand-maroon text-lg"></i> 2. 5-Stage Inspection & Trust Pipeline
+                <i class="fas fa-stream text-brand-maroon text-lg"></i> 3. 5-Stage Inspection & Trust Pipeline
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
@@ -175,24 +243,6 @@
                     <p class="text-brand-beige/70">
                         When a lower-face mask is detected, weights shift to $85\%$ Periocular + $15\%$ Full Face[cite: 45]. Reaching 3-frame consensus triggers instant MQTT door unlock, saving localized snapshots and appending to cloud CSV[cite: 27, 29, 42, 44].
                     </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 3: Live Verification & Real-Time Cloud Logging -->
-        <section class="space-y-4">
-            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
-                <i class="fas fa-cloud-upload-alt text-brand-maroon text-lg"></i> 3. Live Cloud Database Telemetry (Google Drive CSV Sync)
-            </h2>
-            <div class="bg-brand-card border border-brand-border p-4 rounded-2xl space-y-3">
-                <img src="../ocular-cloud-csv.png" alt="Google Drive Attendance CSV Log Telemetry" class="w-full h-auto rounded-xl border border-brand-border bg-black">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 text-xs text-brand-beige/70 pt-2">
-                    <p>
-                        Figure 1: Live execution log demonstrating direct atomic file-buffer flushing (<code class="text-amber-200">os.fsync</code>) to <code class="text-white">G:\My Drive\Attendance_Logs\attendance_2026-09-28.csv</code>[cite: 42, 54]. Logs timestamp, User ID, Full-Face Score, Periocular Score, Fused Score, and Dual-Consensus status[cite: 42, 54].
-                    </p>
-                    <span class="px-2 py-1 rounded bg-emerald-950 text-emerald-400 border border-emerald-800/60 font-mono text-[10px] whitespace-nowrap">
-                        Live Cloud Sync Confirmed
-                    </span>
                 </div>
             </div>
         </section>

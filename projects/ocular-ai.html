@@ -53,7 +53,7 @@
                 Ocular AI Time & Attendance System (Ocular AI TAS)
             </h1>
             <p class="text-brand-beige/80 text-sm md:text-base leading-relaxed">
-                An industrial-grade computer vision and edge IoT ecosystem designed to eliminate workplace entry bottlenecks and lower-face occlusion failures (masks, niqabs, prescription glasses)[cite: 19, 36]. Built with software-based 2D FFT presentation attack detection (PAD), multi-subject Euclidean centroid tracking, dynamic periocular score fusion, HiveMQ MQTT telemetry, and real-time cloud database logging[cite: 22, 23, 27, 41, 42, 45, 50, 53].
+                An industrial-grade computer vision and edge IoT ecosystem designed to eliminate workplace entry bottlenecks and lower-face occlusion failures (masks, niqabs, prescription glasses). Built with software-based 2D FFT presentation attack detection (PAD), multi-subject Euclidean centroid tracking, dynamic periocular score fusion, HiveMQ MQTT telemetry, and real-time cloud database logging.
             </p>
         </div>
 
@@ -83,63 +83,63 @@
                 <i class="fas fa-desktop text-brand-maroon text-lg"></i> 1. Live System Verification & Hardware Testbench
             </h2>
             <p class="text-sm text-brand-beige/80 leading-relaxed">
-                Real-time execution of the Python inference engine integrated with virtual/physical ESP32 hardware via MQTT messaging[cite: 26, 31, 50, 53].
+                Real-time execution of the Python inference engine integrated with physical/simulated ESP32 hardware via MQTT messaging[cite: 50, 51, 52].
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Image 1: Masked Verification + ESP32 Lock -->
+                <!-- Image 1: Approved Entry (Mask + Eyeglasses + Servo Unlock) -->
                 <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
                     <div class="rounded-lg overflow-hidden border border-brand-border bg-black">
-                        <img src="../Screenshot%202026-09-27%20115652.jpg" alt="Ocular AI Masked Verification" class="w-full h-auto object-cover">
+                        <img src="../approved-entry.jpg" alt="Approved Entry - Masked Periocular Verification" class="w-full h-auto object-cover">
                     </div>
                     <div class="flex justify-between items-center">
-                        <h3 class="text-sm font-bold text-white">Masked Periocular Verification</h3>
-                        <span class="text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800/60 px-2 py-0.5 rounded font-mono">Live Demo</span>
+                        <h3 class="text-sm font-bold text-white">Mask & Eyeglass Verification (Access Granted)</h3>
+                        <span class="text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800/60 px-2 py-0.5 rounded font-mono">MQTT Unlock</span>
                     </div>
                     <p class="text-xs text-brand-beige/70">
-                        System successfully identifies subject under lower-face mask occlusion using upper periocular vectors[cite: 23, 31]. Triggers instant MQTT unlock command to ESP32 servo motor and green status LED[cite: 23, 31].
+                        System successfully identifies subject under combined mask and eyeglass occlusion (<code class="text-amber-200">P:0.54 | F:0.60 | C:0.58</code>)[cite: 51]. Dispatches instant MQTT signal (<code class="text-emerald-400">'1'</code>) to topic <code class="text-amber-200">attendance/door/command</code>, rotating ESP32 servo motor to 90° and turning Green LED ON[cite: 51].
                     </p>
                 </div>
 
-                <!-- Image 2: Anti-Spoof Replay Attack Test -->
+                <!-- Image 2: Blocked Entry (Unknown / Spoof Attempt) -->
                 <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
                     <div class="rounded-lg overflow-hidden border border-brand-border bg-black">
-                        <img src="../Screenshot%202026-09-27%20115015.jpg" alt="Anti-Spoof Replay Attack Test" class="w-full h-auto object-cover">
+                        <img src="../blocked-entry.jpg" alt="Blocked Entry - Spoof Rejection" class="w-full h-auto object-cover">
                     </div>
                     <div class="flex justify-between items-center">
-                        <h3 class="text-sm font-bold text-white">Presentation Attack Rejection</h3>
-                        <span class="text-[10px] bg-red-950 text-red-400 border border-red-800/60 px-2 py-0.5 rounded font-mono">Anti-Spoof Active</span>
+                        <h3 class="text-sm font-bold text-white">Spoof & Unknown Attempt Rejection</h3>
+                        <span class="text-[10px] bg-red-950 text-red-400 border border-red-800/60 px-2 py-0.5 rounded font-mono">Access Denied</span>
                     </div>
                     <p class="text-xs text-brand-beige/70">
-                        Phone screen display attack evaluated via 2D FFT spectrum analysis[cite: 28, 30, 41]. Periodic screen lattice spikes are rejected, keeping the ESP32 door lock secured[cite: 28, 30, 41].
+                        Unenrolled digital photo display is rejected (<code class="text-red-400">Unknown [P:0.29 | F:0.41 | C:0.36]</code>)[cite: 52]. The ESP32 door lock remains secured at 0° with Red LED illuminated[cite: 52].
                     </p>
                 </div>
 
-                <!-- Image 3: Dual-Consensus Real-Time Tracking -->
+                <!-- Image 3: Multi-Subject Tracking & Anti-Spoofing -->
                 <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
                     <div class="rounded-lg overflow-hidden border border-brand-border bg-black">
-                        <img src="../Screenshot%202026-09-27%20115454.jpg" alt="Dual Consensus Real Time Tracking" class="w-full h-auto object-cover">
+                        <img src="../anti-spoofing-multi-tracker.jpg" alt="Multi-Subject Anti-Spoofing Tracker" class="w-full h-auto object-cover">
                     </div>
                     <div class="flex justify-between items-center">
-                        <h3 class="text-sm font-bold text-white">Dual-Consensus Tracking Engine</h3>
+                        <h3 class="text-sm font-bold text-white">Parallel Multi-Subject Anti-Spoof Tracking</h3>
                         <span class="text-[10px] bg-amber-950 text-amber-400 border border-amber-800/60 px-2 py-0.5 rounded font-mono">Real-Time HUD</span>
                     </div>
                     <p class="text-xs text-brand-beige/70">
-                        Real-time tracking HUD displaying active confidence metrics ($\text{P: } 0.53, \text{F: } 0.66, \text{C: } 0.61$)[cite: 32]. Enforces 3-frame consensus before logging to prevent transient false positives[cite: 27, 44].
+                        Parallel tracking pipeline evaluates live face alongside phone presentation attack[cite: 50]. Valid subject is logged (<code class="text-emerald-400">ID #14: LOGGED</code>), while phone display attack is hard-gated (<code class="text-red-400">ID #15: UNRECOGNIZED</code>) and saved to snapshot directory[cite: 50].
                     </p>
                 </div>
 
-                <!-- Image 4: Live Cloud CSV Log -->
+                <!-- Image 4: Google Drive Cloud CSV Logging -->
                 <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
                     <div class="rounded-lg overflow-hidden border border-brand-border bg-black">
-                        <img src="../Screenshot%202026-09-28%20131257.png" alt="Google Drive Attendance CSV Log Telemetry" class="w-full h-auto object-cover">
+                        <img src="../cloud-logged.png" alt="Google Drive Attendance Cloud CSV Telemetry" class="w-full h-auto object-cover">
                     </div>
                     <div class="flex justify-between items-center">
-                        <h3 class="text-sm font-bold text-white">Google Drive Cloud CSV Telemetry</h3>
-                        <span class="text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800/60 px-2 py-0.5 rounded font-mono">Cloud Sync</span>
+                        <h3 class="text-sm font-bold text-white">Google Drive Real-Time CSV Telemetry</h3>
+                        <span class="text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800/60 px-2 py-0.5 rounded font-mono">Cloud Persistence</span>
                     </div>
                     <p class="text-xs text-brand-beige/70">
-                        Automated CSV append loop executing atomic buffer flushes directly to Google Drive cloud folder[cite: 42, 54]. Logs timestamp, User ID, Full Score, Periocular Score, and Fused Score[cite: 42, 54].
+                        Automated CSV loop executes atomic buffer flushes (<code class="text-amber-200">os.fsync</code>) directly to Google Drive folder <code class="text-white">G:\My Drive\Attendance_Logs\attendance_2026-09-28.csv</code>[cite: 53]. Logs timestamp, User ID, Full Score, Periocular Score, and Fused Score[cite: 53].
                     </p>
                 </div>
             </div>
@@ -152,7 +152,7 @@
             </h2>
             <div class="bg-brand-card border border-brand-border p-6 rounded-2xl space-y-4 text-sm text-brand-beige/80">
                 <p>
-                    Legacy biometric entry systems in Malaysian industrial, medical, and municipal facilities rely on single-subject serial scanning or contact fingerprint scanners[cite: 19, 34, 36]. These solutions create entry queues during shift changes, fail under lower-face occlusions, and require expensive specialized hardware IR camera modules to prevent photo replay spoofs[cite: 21, 22, 36].
+                    Legacy biometric entry systems in Malaysian industrial, medical, and municipal facilities rely on single-subject serial scanning or contact fingerprint scanners. These solutions create entry queues during shift changes, fail under lower-face occlusions, and require expensive specialized hardware IR camera modules to prevent photo replay spoofs.
                 </p>
 
                 <!-- Comparison Table -->
@@ -209,7 +209,7 @@
                     <span class="text-brand-maroon font-mono font-bold text-sm block">STAGE 01</span>
                     <h3 class="text-white font-bold text-sm">Distance Gate</h3>
                     <p class="text-brand-beige/70">
-                        Evaluates bounding box spatial ratio to enforce a strictly $\le 2.0\text{m}$ operational zone, discarding far-field background passersby[cite: 28, 53].
+                        Evaluates bounding box spatial ratio to enforce a strictly $\le 2.0\text{m}$ operational zone, discarding far-field background passersby.
                     </p>
                 </div>
                 <!-- Stage 2 -->
@@ -217,7 +217,7 @@
                     <span class="text-brand-maroon font-mono font-bold text-sm block">STAGE 02</span>
                     <h3 class="text-white font-bold text-sm">Quality Inspection</h3>
                     <p class="text-brand-beige/70">
-                        Computes Laplacian blur variance ($\text{threshold} > 10.0$) and head roll angles ($< 25^\circ$), normalizing lighting via YUV linear luminance scaling[cite: 28, 51].
+                        Computes Laplacian blur variance ($\text{threshold} > 10.0$) and head roll angles ($< 25^\circ$), normalizing lighting via YUV linear luminance scaling.
                     </p>
                 </div>
                 <!-- Stage 3 -->
@@ -225,7 +225,7 @@
                     <span class="text-brand-maroon font-mono font-bold text-sm block">STAGE 03</span>
                     <h3 class="text-white font-bold text-sm">2D FFT Anti-Spoofing</h3>
                     <p class="text-brand-beige/70">
-                        Applies 2D Fast Fourier Transform on raw face crops. Screen displays (phones/monitors) exhibit distinct high-frequency lattice peak ratios ($> 52.0$), rejecting spoof attacks[cite: 28, 41].
+                        Applies 2D Fast Fourier Transform on raw face crops. Screen displays (phones/monitors) exhibit distinct high-frequency lattice peak ratios ($> 52.0$), rejecting spoof attacks.
                     </p>
                 </div>
                 <!-- Stage 4 -->
@@ -233,7 +233,7 @@
                     <span class="text-brand-maroon font-mono font-bold text-sm block">STAGE 04</span>
                     <h3 class="text-white font-bold text-sm">Dual Embedding Crop</h3>
                     <p class="text-brand-beige/70">
-                        Crops full-face and top-55% pericircular (eye/eyebrow) Region of Interest (ROI) into parallel feature vectors via deep MobileFaceNet ONNX embeddings[cite: 29, 45, 46].
+                        Crops full-face and top-55% pericircular (eye/eyebrow) Region of Interest (ROI) into parallel feature vectors via deep MobileFaceNet ONNX embeddings.
                     </p>
                 </div>
                 <!-- Stage 5 -->
@@ -241,7 +241,7 @@
                     <span class="text-brand-maroon font-mono font-bold text-sm block">STAGE 05</span>
                     <h3 class="text-white font-bold text-sm">Dynamic Score Fusion & Consensus</h3>
                     <p class="text-brand-beige/70">
-                        When a lower-face mask is detected, weights shift to $85\%$ Periocular + $15\%$ Full Face[cite: 45]. Reaching 3-frame consensus triggers instant MQTT door unlock, saving localized snapshots and appending to cloud CSV[cite: 27, 29, 42, 44].
+                        When a lower-face mask is detected, weights shift to $85\%$ Periocular + $15\%$ Full Face. Reaching 3-frame consensus triggers instant MQTT door unlock, saving localized snapshots and appending to cloud CSV.
                     </p>
                 </div>
             </div>
@@ -254,27 +254,27 @@
             </h2>
             <div class="bg-brand-card border border-brand-border p-6 rounded-2xl space-y-4 text-sm text-brand-beige/80">
                 <p>
-                    Verification results are decoupled from host processing threads via non-blocking asynchronous MQTT dispatches on HiveMQ broker topic <code class="text-amber-200">attendance/door/command</code>[cite: 23, 50].
+                    Verification results are decoupled from host processing threads via non-blocking asynchronous MQTT dispatches on HiveMQ broker topic <code class="text-amber-200">attendance/door/command</code>.
                 </p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
                     <div class="bg-brand-dark p-4 rounded-xl border border-brand-border space-y-2">
                         <h4 class="font-bold text-white text-sm">ESP32 Pinout & Component Interconnect</h4>
                         <ul class="space-y-1 text-brand-beige/80 font-mono">
-                            <li>• Pin 18 $\rightarrow$ SG90 Servo Signal ($0^\circ$ Locked / $90^\circ$ Unlocked)[cite: 23]</li>
-                            <li>• Pin 19 $\rightarrow$ Green LED Array (Access Granted Indicator)[cite: 23, 50]</li>
-                            <li>• Pin 21 $\rightarrow$ Red LED Array (Locked / Access Denied Indicator)[cite: 23, 50]</li>
-                            <li>• Protocol $\rightarrow$ Asynchronous PubSubClient over Wi-Fi[cite: 23, 50]</li>
+                            <li>• Pin 18 $\rightarrow$ SG90 Servo Signal ($0^\circ$ Locked / $90^\circ$ Unlocked)</li>
+                            <li>• Pin 19 $\rightarrow$ Green LED Array (Access Granted Indicator)</li>
+                            <li>• Pin 21 $\rightarrow$ Red LED Array (Locked / Access Denied Indicator)</li>
+                            <li>• Protocol $\rightarrow$ Asynchronous PubSubClient over Wi-Fi</li>
                         </ul>
                     </div>
 
                     <div class="bg-brand-dark p-4 rounded-xl border border-brand-border space-y-2">
                         <h4 class="font-bold text-white text-sm">Cloud Data Persistence Loop</h4>
                         <ul class="space-y-1 text-brand-beige/80 font-mono">
-                            <li>• Primary Storage $\rightarrow$ Local SQLite <code class="text-amber-200">attendance.db</code>[cite: 27, 42]</li>
-                            <li>• Sync Pipeline $\rightarrow$ Google Drive Desktop auto-sync[cite: 27, 42]</li>
-                            <li>• CSV Stream $\rightarrow$ <code class="text-amber-200">attendance_YYYY-MM-DD.csv</code> with <code class="text-emerald-400">os.fsync</code> buffer flush[cite: 39, 42]</li>
-                            <li>• Anti-Redundancy $\rightarrow$ 8-second subject cooldown[cite: 27, 29, 44]</li>
+                            <li>• Primary Storage $\rightarrow$ Local SQLite <code class="text-amber-200">attendance.db</code></li>
+                            <li>• Sync Pipeline $\rightarrow$ Google Drive Desktop auto-sync</li>
+                            <li>• CSV Stream $\rightarrow$ <code class="text-amber-200">attendance_YYYY-MM-DD.csv</code> with <code class="text-emerald-400">os.fsync</code> buffer flush</li>
+                            <li>• Anti-Redundancy $\rightarrow$ 8-second subject cooldown</li>
                         </ul>
                     </div>
                 </div>
@@ -321,37 +321,4 @@ def inspect_face_roi(self, raw_face_bgr):
 
     # Periodic digital display screen lattice triggers peak spike (> 52.0)
     if peak_ratio > 52.0:
-        return True, f"SCREEN_DISPLAY_GRID ({peak_ratio:.1f} > 52.0)"
-    return False, "LIVE_REAL_SUBJECT"</pre>
-            </div>
-
-            <!-- Snippet 2: Dynamic Score Fusion -->
-            <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-2">
-                <div class="flex justify-between text-xs text-brand-beige/70 font-mono">
-                    <span>face_matcher.py — Adaptive Score Fusion</span>
-                    <span class="text-amber-200">Mask & Niqab Resilience</span>
-                </div>
-                <pre class="bg-black/70 p-4 rounded-lg text-emerald-400 font-mono text-xs overflow-x-auto leading-relaxed border border-brand-border/60">
-def fuse_scores(self, score_full, score_perio, occlusion_state):
-    if occlusion_state == "MASK_OCCLUDED":
-        # Rely heavily on pericircular eye region when lower face is covered
-        fused_score = (0.15 * score_full) + (0.85 * score_perio)
-        mode = "PERIOCULAR_FUSED"
-    else:
-        # Prioritize full face embedding when unobstructed
-        fused_score = (0.85 * score_full) + (0.15 * score_perio)
-        mode = "FULL_FACE_PRIMARY"
-
-    return fused_score, mode, score_full, score_perio</pre>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="py-10 px-6 border-t border-brand-border text-center text-xs text-brand-beige/60">
-        <p>© 2026 Muhammad Ikhwan Bin Nazeri. Hosted on GitHub Pages.</p>
-    </footer>
-
-</body>
-</html>
+        return True, f"SCREEN_DISPLAY_GRID ({peak_ratio

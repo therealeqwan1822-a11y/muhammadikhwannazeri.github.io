@@ -85,7 +85,7 @@
             </div>
         </div>
 
-        <!-- NEW SECTION: Live Physical DE2-115 Hardware Board Results -->
+        <!-- Section 1: Live Physical DE2-115 Hardware Board Results -->
         <section class="space-y-4">
             <h2 class="text-2xl font-bold text-white flex items-center gap-2">
                 <i class="fas fa-desktop text-brand-maroon text-lg"></i> 1. Live Hardware Board Verification (DE2-115 Bench Results)
@@ -266,6 +266,106 @@
                         </p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Synthesizable VHDL Core Code -->
+        <section class="space-y-4">
+            <div class="flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                    <i class="fas fa-code text-brand-maroon text-lg"></i> 7. Synthesizable VHDL Core Code
+                </h2>
+                <a href="https://github.com/therealeqwan1822-a11y/muhammadikhwannazeri.github.io" target="_blank" class="text-xs text-brand-beigelight bg-brand-maroon/30 px-3 py-1.5 rounded-lg border border-brand-maroon/50 hover:bg-brand-maroon hover:text-white transition-colors flex items-center gap-1.5">
+                    <i class="fab fa-github"></i> View Full Repository
+                </a>
+            </div>
+
+            <div class="bg-brand-card border border-brand-border rounded-xl p-4">
+                <pre class="bg-black/70 p-4 rounded-lg text-emerald-400 font-mono text-xs overflow-x-auto leading-relaxed border border-brand-border/60">
+-- ====================================================================
+-- Project: Tic-Tac-Toe Game Engine on Intel DE2-115 FPGA
+-- Author: Muhammad Ikhwan Bin Nazeri
+-- Target Board: Intel Cyclone IV EP4CE115F29C7
+-- Language: VHDL Synthesis
+-- ====================================================================
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity fsm_controller is
+    Port (
+        clock         : in  STD_LOGIC;
+        reset         : in  STD_LOGIC;
+        play          : in  STD_LOGIC;
+        pc            : in  STD_LOGIC;
+        illegal_move  : in  STD_LOGIC;
+        no_space      : in  STD_LOGIC;
+        win           : in  STD_LOGIC;
+        player_play   : out STD_LOGIC;
+        computer_play : out STD_LOGIC
+    );
+end fsm_controller;
+
+architecture Behavioral of fsm_controller is
+
+    type state_type is (IDLE, PLAYER, COMPUTER, GAME_DONE);
+    signal current_state, next_state : state_type;
+
+begin
+
+    -- Synchronous State Register
+    process(clock, reset)
+    begin
+        if reset = '1' then
+            current_state <= IDLE;
+        elsif rising_edge(clock) then
+            current_state <= next_state;
+        end if;
+    end process;
+
+    -- Combinational State Transitions
+    process(current_state, play, pc, illegal_move, no_space, win)
+    begin
+        case current_state is
+            when IDLE =>
+                if play = '1' then
+                    next_state <= PLAYER;
+                else
+                    next_state <= IDLE;
+                end if;
+
+            when PLAYER =>
+                if win = '1' or no_space = '1' then
+                    next_state <= GAME_DONE;
+                elsif pc = '1' and illegal_move = '0' then
+                    next_state <= COMPUTER;
+                else
+                    next_state <= PLAYER;
+                end if;
+
+            when COMPUTER =>
+                if win = '1' or no_space = '1' then
+                    next_state <= GAME_DONE;
+                elsif pc = '0' then
+                    next_state <= PLAYER;
+                else
+                    next_state <= COMPUTER;
+                end if;
+
+            when GAME_DONE =>
+                next_state <= GAME_DONE;
+
+            when others =>
+                next_state <= IDLE;
+        end case;
+    end process;
+
+    -- Output Control Signals
+    player_play   <= '1' when current_state = PLAYER else '0';
+    computer_play <= '1' when current_state = COMPUTER else '0';
+
+end Behavioral;</pre>
             </div>
         </section>
 

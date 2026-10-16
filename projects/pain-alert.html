@@ -58,7 +58,7 @@
                 Pain Alert System — Non-Verbal Distress Detection
             </h1>
             <p class="text-brand-beige/80 text-sm md:text-base leading-relaxed">
-                An end-to-end medical IoT and computer vision solution engineered to detect non-verbal facial pain expressions in paralyzed and non-verbal patients (ALS, severe spinal injuries)[cite: 26]. Combines an optical ESP32-CAM streaming node with a GPU-accelerated YOLO11n object detection backend, thread-safe buffer clearing, 0.4s state debouncing, and asynchronous HTTP buzzer alert triggers[cite: 26].
+                An end-to-end medical IoT and computer vision solution engineered to detect non-verbal facial pain expressions in paralyzed and non-verbal patients (ALS, severe spinal injuries). Combines an optical ESP32-CAM streaming node with a GPU-accelerated YOLO11n object detection backend, thread-safe buffer clearing, 0.4s state debouncing, and asynchronous HTTP buzzer alert triggers.
             </p>
         </div>
 
@@ -88,7 +88,7 @@
                 <i class="fas fa-desktop text-brand-maroon text-lg"></i> 1. Live AI Execution & Hardware Demonstration
             </h2>
             <p class="text-sm text-brand-beige/80 leading-relaxed">
-                Real-time inference and hardware testbench running live video processing and active buzzer alerting[cite: 26].
+                Real-time inference and hardware testbench running live video processing and active buzzer alerting.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -102,7 +102,7 @@
                         <span class="text-[10px] bg-red-950 text-red-400 border border-red-800/60 px-2 py-0.5 rounded font-mono">Buzzer Active</span>
                     </div>
                     <p class="text-xs text-brand-beige/70">
-                        Inference engine detects eyebrow contraction (<code class="text-red-400">FROWNED_EYEBROWS</code>)[cite: 26, 35]. Upon 2-frame consensus, the system dispatches an asynchronous HTTP request (<code class="text-amber-200">/buzzer/on</code>) driving GPIO 13 HIGH to sound the physical alarm[cite: 26].
+                        Inference engine detects eyebrow contraction (<code class="text-red-400">FROWNED_EYEBROWS</code>). Upon 2-frame consensus, the system dispatches an asynchronous HTTP request (<code class="text-amber-200">/buzzer/on</code>) driving GPIO 13 HIGH to sound the physical alarm.
                     </p>
                 </div>
 
@@ -116,7 +116,7 @@
                         <span class="text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800/60 px-2 py-0.5 rounded font-mono">Alarm Muted</span>
                     </div>
                     <p class="text-xs text-brand-beige/70">
-                        Live feed evaluates neutral facial expression (<code class="text-emerald-400">RELAXED_EYEBROWS</code>)[cite: 26, 32]. The system issues a REST command (<code class="text-amber-200">/buzzer/off</code>) setting GPIO 13 LOW to maintain a silent monitoring state[cite: 26].
+                        Live feed evaluates neutral facial expression (<code class="text-emerald-400">RELAXED_EYEBROWS</code>). The system issues a REST command (<code class="text-amber-200">/buzzer/off</code>) setting GPIO 13 LOW to maintain a silent monitoring state.
                     </p>
                 </div>
 
@@ -130,7 +130,7 @@
                         <span class="text-[10px] bg-amber-950 text-amber-400 border border-amber-800/60 px-2 py-0.5 rounded font-mono">Enclosure Housing</span>
                     </div>
                     <p class="text-xs text-brand-beige/70">
-                        Custom-built optical enclosure featuring a matte black exterior hood and red corrugated internal lining[cite: 26, 33]. Isolates the ESP32-CAM and active buzzer from ambient room glare to ensure uniform image lighting geometry[cite: 26].
+                        Custom-built optical enclosure featuring a matte black exterior hood and red corrugated internal lining. Isolates the ESP32-CAM and active buzzer from ambient room glare to ensure uniform image lighting geometry.
                     </p>
                 </div>
 
@@ -144,7 +144,7 @@
                         <span class="text-[10px] bg-brand-maroon/40 text-brand-beigelight border border-brand-maroon/60 px-2 py-0.5 rounded font-mono">Live Demo</span>
                     </div>
                     <p class="text-xs text-brand-beige/70">
-                        Live prototype deployment at Table 123 during the Faculty of Engineering UPM exhibition[cite: 26, 34]. Demonstrating real-time GPU laptop inference paired with tablet telemetry displays and physical optical hardware[cite: 26, 34].
+                        Live prototype deployment at Table 123 during the Faculty of Engineering UPM exhibition. Demonstrating real-time GPU laptop inference paired with tablet telemetry displays and physical optical hardware.
                     </p>
                 </div>
             </div>
@@ -163,12 +163,12 @@
                     <div class="space-y-3 text-xs">
                         <h3 class="text-base font-bold text-white">Cirkit Designer Pinout & Interconnect</h3>
                         <p class="text-brand-beige/80 leading-relaxed">
-                            The hardware node integrates an ESP32-CAM MB programmer shield supplying 5V power regulation and micro-USB serial programming capabilities[cite: 26, 27].
+                            The hardware node integrates an ESP32-CAM MB programmer shield supplying 5V power regulation and micro-USB serial programming capabilities.
                         </p>
                         <ul class="space-y-1.5 font-mono text-brand-beige/90">
-                            <li>• <strong class="text-white">Power Supply:</strong> 5V sourced directly via USB MB shield[cite: 26, 27].</li>
-                            <li>• <strong class="text-white">Buzzer Control Output:</strong> Digital Pin GPIO 13 (<code class="text-amber-200">BUZZER_PIN 13</code>) connected to active buzzer signal[cite: 26, 27].</li>
-                            <li>• <strong class="text-white">Camera Sensor:</strong> OV2640 module interfaced via internal parallel camera bus[cite: 26, 27].</li>
+                            <li>• <strong class="text-white">Power Supply:</strong> 5V sourced directly via USB MB shield.</li>
+                            <li>• <strong class="text-white">Buzzer Control Output:</strong> Digital Pin GPIO 13 (<code class="text-amber-200">BUZZER_PIN 13</code>) connected to active buzzer signal.</li>
+                            <li>• <strong class="text-white">Camera Sensor:</strong> OV2640 module interfaced via internal parallel camera bus.</li>
                         </ul>
                     </div>
                 </div>
@@ -181,7 +181,7 @@
                 <i class="fas fa-chart-line text-brand-maroon text-lg"></i> 3. YOLO11n Model Training & Analytics
             </h2>
             <p class="text-sm text-brand-beige/80 leading-relaxed">
-                Fine-tuned YOLO11 Nano (<code class="text-amber-200">yolo11n.pt</code>) for 50 epochs on Google Colab leveraging an NVIDIA Tesla T4 GPU[cite: 26, 30].
+                Fine-tuned YOLO11 Nano (<code class="text-amber-200">yolo11n.pt</code>) for 50 epochs on Google Colab leveraging an NVIDIA Tesla T4 GPU.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -192,7 +192,7 @@
                     </div>
                     <h3 class="text-sm font-bold text-white">Loss Convergence & Metric Curves (50 Epochs)</h3>
                     <p class="text-xs text-brand-beige/70">
-                        Rapid loss decay across bounding box (<code class="text-amber-200">val/box_loss</code>), classification (<code class="text-amber-200">val/cls_loss</code>), and distribution focal loss (<code class="text-amber-200">val/dfl_loss</code>) demonstrating stable model convergence[cite: 26, 28].
+                        Rapid loss decay across bounding box (<code class="text-amber-200">val/box_loss</code>), classification (<code class="text-amber-200">val/cls_loss</code>), and distribution focal loss (<code class="text-amber-200">val/dfl_loss</code>) demonstrating stable model convergence.
                     </p>
                 </div>
 
@@ -203,7 +203,7 @@
                     </div>
                     <h3 class="text-sm font-bold text-white">Roboflow Model Evaluation Dashboard</h3>
                     <p class="text-xs text-brand-beige/70">
-                        Validation results confirm <strong class="text-emerald-400">99.5% mAP@50</strong>, <strong class="text-emerald-400">99.3% Precision</strong>, and <strong class="text-emerald-400">100.0% Recall</strong> on test dataset split[cite: 26, 29].
+                        Validation results confirm <strong class="text-emerald-400">99.5% mAP@50</strong>, <strong class="text-emerald-400">99.3% Precision</strong>, and <strong class="text-emerald-400">100.0% Recall</strong> on test dataset split.
                     </p>
                 </div>
             </div>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pain Alert System | Embedded Vision & Healthcare IoT</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#18070a',      /* Deep Burgundy / Maroon Background */
+                            card: '#260e13',      /* Dark Maroon Card */
+                            border: '#421a22',    /* Soft Maroon Border */
+                            maroon: '#9b1c38',    /* Rich Maroon Accent */
+                            beige: '#e8dbce',     /* Warm Beige Text & Badges */
+                            beigelight: '#f7f1ea' /* Soft Off-White/Beige Highlights */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-brand-beige font-sans antialiased selection:bg-brand-maroon selection:text-brand-beigelight">
+
+    <!-- Top Navigation -->
+    <nav class="w-full bg-brand-dark/90 border-b border-brand-border py-4 px-6 fixed top-0 z-50 backdrop-blur-md">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-sm font-semibold text-brand-beige hover:text-white flex items-center gap-2 transition-colors">
+                <i class="fas fa-arrow-left"></i> Back to Main Portfolio
+            </a>
+            <span class="text-xs font-mono text-brand-beigelight bg-brand-maroon/30 px-3 py-1 rounded-full border border-brand-maroon/40">
+                Mini Project EEE3933 | UPM
+            </span>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="max-w-5xl mx-auto pt-28 pb-20 px-6 space-y-12">
+        
+        <!-- Header & Summary Banner -->
+        <div class="space-y-4 bg-brand-card border border-brand-border p-6 rounded-2xl">
+            <div class="flex flex-wrap items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-brand-maroon/20 border border-brand-maroon/40 text-brand-beigelight text-xs font-mono">
+                    AI-Assisted Non-Invasive Pain Monitoring
+                </span>
+                <span class="px-3 py-1 rounded-full bg-brand-dark border border-brand-border text-brand-beige/80 text-xs font-mono">
+                    Role: Lead Firmware, AI & Systems Developer
+                </span>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+                Pain Alert System — Non-Verbal Distress Detection
+            </h1>
+            <p class="text-brand-beige/80 text-sm md:text-base leading-relaxed">
+                An end-to-end medical IoT and computer vision solution engineered to detect non-verbal facial pain expressions in paralyzed and non-verbal patients (ALS, severe spinal injuries)[cite: 26]. Combines an optical ESP32-CAM streaming node with a GPU-accelerated YOLO11n object detection backend, thread-safe buffer clearing, 0.4s state debouncing, and asynchronous HTTP buzzer alert triggers[cite: 26].
+            </p>
+        </div>
+
+        <!-- Key Performance Indicators (KPIs) -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">Detection Accuracy</div>
+                <div class="text-base font-bold text-emerald-400 mt-1">99.5% mAP@50</div>
+            </div>
+            <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">True Coverage</div>
+                <div class="text-base font-bold text-emerald-400 mt-1">100.0% Recall</div>
+            </div>
+            <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">Neural Architecture</div>
+                <div class="text-base font-bold text-white mt-1">YOLO11n (FP16 GPU)</div>
+            </div>
+            <div class="bg-brand-card border border-brand-border p-4 rounded-xl">
+                <div class="text-xs text-brand-beige/60 uppercase font-mono">Hardware Node</div>
+                <div class="text-base font-bold text-white mt-1">ESP32-CAM (GPIO 13)</div>
+            </div>
+        </div>
+
+        <!-- Section 1: Live System Execution & Hardware Gallery -->
+        <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                <i class="fas fa-desktop text-brand-maroon text-lg"></i> 1. Live AI Execution & Hardware Demonstration
+            </h2>
+            <p class="text-sm text-brand-beige/80 leading-relaxed">
+                Real-time inference and hardware testbench running live video processing and active buzzer alerting[cite: 26].
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Image 1: Frown Result (PNG) -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <div class="rounded-lg overflow-hidden border border-brand-border bg-black">
+                        <img src="../frown-result.png" alt="Pain Expression Detected - Frowned Eyebrow" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-sm font-bold text-white">Pain Distress State (Frowned Eyebrow)</h3>
+                        <span class="text-[10px] bg-red-950 text-red-400 border border-red-800/60 px-2 py-0.5 rounded font-mono">Buzzer Active</span>
+                    </div>
+                    <p class="text-xs text-brand-beige/70">
+                        Inference engine detects eyebrow contraction (<code class="text-red-400">FROWNED_EYEBROWS</code>)[cite: 26, 35]. Upon 2-frame consensus, the system dispatches an asynchronous HTTP request (<code class="text-amber-200">/buzzer/on</code>) driving GPIO 13 HIGH to sound the physical alarm[cite: 26].
+                    </p>
+                </div>
+
+                <!-- Image 2: Relaxed Result (JPEG) -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <div class="rounded-lg overflow-hidden border border-brand-border bg-black">
+                        <img src="../relaxed-result.jpg" alt="Normal State Detected - Relaxed Eyebrow" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-sm font-bold text-white">Normal Patient State (Relaxed Eyebrow)</h3>
+                        <span class="text-[10px] bg-emerald-950 text-emerald-400 border border-emerald-800/60 px-2 py-0.5 rounded font-mono">Alarm Muted</span>
+                    </div>
+                    <p class="text-xs text-brand-beige/70">
+                        Live feed evaluates neutral facial expression (<code class="text-emerald-400">RELAXED_EYEBROWS</code>)[cite: 26, 32]. The system issues a REST command (<code class="text-amber-200">/buzzer/off</code>) setting GPIO 13 LOW to maintain a silent monitoring state[cite: 26].
+                    </p>
+                </div>
+
+                <!-- Image 3: Enclosure Box Setup (JPEG) -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <div class="rounded-lg overflow-hidden border border-brand-border bg-black">
+                        <img src="../model.jpg" alt="Custom Anti-Glare Optical Enclosure Box" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-sm font-bold text-white">Anti-Glare Optical Housing Prototype</h3>
+                        <span class="text-[10px] bg-amber-950 text-amber-400 border border-amber-800/60 px-2 py-0.5 rounded font-mono">Enclosure Housing</span>
+                    </div>
+                    <p class="text-xs text-brand-beige/70">
+                        Custom-built optical enclosure featuring a matte black exterior hood and red corrugated internal lining[cite: 26, 33]. Isolates the ESP32-CAM and active buzzer from ambient room glare to ensure uniform image lighting geometry[cite: 26].
+                    </p>
+                </div>
+
+                <!-- Image 4: Exhibition Presentation Booth (JPEG) -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <div class="rounded-lg overflow-hidden border border-brand-border bg-black">
+                        <img src="../present.jpg" alt="Faculty Exhibition Booth Deployment at UPM" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-sm font-bold text-white">Faculty Exhibition Booth (Table 123)</h3>
+                        <span class="text-[10px] bg-brand-maroon/40 text-brand-beigelight border border-brand-maroon/60 px-2 py-0.5 rounded font-mono">Live Demo</span>
+                    </div>
+                    <p class="text-xs text-brand-beige/70">
+                        Live prototype deployment at Table 123 during the Faculty of Engineering UPM exhibition[cite: 26, 34]. Demonstrating real-time GPU laptop inference paired with tablet telemetry displays and physical optical hardware[cite: 26, 34].
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Circuit Hardware Architecture & Electrical Schematic -->
+        <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                <i class="fas fa-microchip text-brand-maroon text-lg"></i> 2. Circuit Hardware Architecture & Pinout
+            </h2>
+            <div class="bg-brand-card border border-brand-border p-6 rounded-2xl space-y-6 text-sm text-brand-beige/80">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                    <div class="rounded-xl overflow-hidden border border-brand-border bg-black">
+                        <img src="../circuit.jpg" alt="Cirkit Designer Hardware Schematic Diagram" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="space-y-3 text-xs">
+                        <h3 class="text-base font-bold text-white">Cirkit Designer Pinout & Interconnect</h3>
+                        <p class="text-brand-beige/80 leading-relaxed">
+                            The hardware node integrates an ESP32-CAM MB programmer shield supplying 5V power regulation and micro-USB serial programming capabilities[cite: 26, 27].
+                        </p>
+                        <ul class="space-y-1.5 font-mono text-brand-beige/90">
+                            <li>• <strong class="text-white">Power Supply:</strong> 5V sourced directly via USB MB shield[cite: 26, 27].</li>
+                            <li>• <strong class="text-white">Buzzer Control Output:</strong> Digital Pin GPIO 13 (<code class="text-amber-200">BUZZER_PIN 13</code>) connected to active buzzer signal[cite: 26, 27].</li>
+                            <li>• <strong class="text-white">Camera Sensor:</strong> OV2640 module interfaced via internal parallel camera bus[cite: 26, 27].</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Deep Learning Training & Performance Analytics -->
+        <section class="space-y-4">
+            <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                <i class="fas fa-chart-line text-brand-maroon text-lg"></i> 3. YOLO11n Model Training & Analytics
+            </h2>
+            <p class="text-sm text-brand-beige/80 leading-relaxed">
+                Fine-tuned YOLO11 Nano (<code class="text-amber-200">yolo11n.pt</code>) for 50 epochs on Google Colab leveraging an NVIDIA Tesla T4 GPU[cite: 26, 30].
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Loss & Precision/Recall Metrics Curves -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <div class="rounded-lg overflow-hidden border border-brand-border bg-white p-2">
+                        <img src="../metrics-achieved.jpeg" alt="YOLO11n Training Loss and Metrics Curves" class="w-full h-auto object-cover">
+                    </div>
+                    <h3 class="text-sm font-bold text-white">Loss Convergence & Metric Curves (50 Epochs)</h3>
+                    <p class="text-xs text-brand-beige/70">
+                        Rapid loss decay across bounding box (<code class="text-amber-200">val/box_loss</code>), classification (<code class="text-amber-200">val/cls_loss</code>), and distribution focal loss (<code class="text-amber-200">val/dfl_loss</code>) demonstrating stable model convergence[cite: 26, 28].
+                    </p>
+                </div>
+
+                <!-- Roboflow Platform Analytics -->
+                <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-3">
+                    <div class="rounded-lg overflow-hidden border border-brand-border bg-white p-2">
+                        <img src="../analytics-result.jpeg" alt="Roboflow Model Evaluation Metrics Dashboard" class="w-full h-auto object-cover">
+                    </div>
+                    <h3 class="text-sm font-bold text-white">Roboflow Model Evaluation Dashboard</h3>
+                    <p class="text-xs text-brand-beige/70">
+                        Validation results confirm <strong class="text-emerald-400">99.5% mAP@50</strong>, <strong class="text-emerald-400">99.3% Precision</strong>, and <strong class="text-emerald-400">100.0% Recall</strong> on test dataset split[cite: 26, 29].
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Firmware & Python Systems Code -->
+        <section class="space-y-4">
+            <div class="flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-white flex items-center gap-2">
+                    <i class="fas fa-code text-brand-maroon text-lg"></i> 4. Systems Firmware & Python Backend
+                </h2>
+                <a href="https://github.com/therealeqwan1822-a11y/muhammadikhwannazeri.github.io" target="_blank" class="text-xs text-brand-beigelight bg-brand-maroon/30 px-3 py-1.5 rounded-lg border border-brand-maroon/50 hover:bg-brand-maroon hover:text-white transition-colors flex items-center gap-1.5">
+                    <i class="fab fa-github"></i> Repository Code
+                </a>
+            </div>
+
+            <!-- Snippet 1: Python Multi-Threaded Streaming Engine -->
+            <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-2">
+                <div class="flex justify-between text-xs text-brand-beige/70 font-mono">
+                    <span>Test.py — Threaded Frame Draining & Debounced Control</span>
+                    <span class="text-amber-200">CUDA FP16 Inference</span>
+                </div>
+                <pre class="bg-black/70 p-4 rounded-lg text-emerald-400 font-mono text-xs overflow-x-auto leading-relaxed border border-brand-border/60">
+# Multi-Threaded Frame Reader & State Debouncing Engine
+import threading, time, requests
+from ultralytics import YOLO
+
+# Load fine-tuned YOLO11n model with FP16 half-precision on CUDA GPU
+model = YOLO("best.pt")
+CONFIRM_FRAMES = 2
+DEBOUNCE_TIME = 0.4  # Seconds
+
+def send_cmd(endpoint):
+    """Non-blocking asynchronous HTTP trigger to ESP32 REST server."""
+    try:
+        requests.get(f"http://192.168.137.57:80{endpoint}", timeout=0.7)
+    except Exception as e:
+        pass
+
+def process_detection(frown_count, relaxed_count, current_state, last_change_time):
+    now = time.time()
+    # Trigger active alarm if frown_count >= 2 and debounced
+    if frown_count >= CONFIRM_FRAMES and current_state == "OFF" and (now - last_change_time) > DEBOUNCE_TIME:
+        threading.Thread(target=send_cmd, args=("/buzzer/on",), daemon=True).start()
+        return "ON", now
+    # Silence alarm if relaxed_count >= 2 and debounced
+    elif relaxed_count >= CONFIRM_FRAMES and current_state == "ON" and (now - last_change_time) > DEBOUNCE_TIME:
+        threading.Thread(target=send_cmd, args=("/buzzer/off",), daemon=True).start()
+        return "OFF", now
+    return current_state, last_change_time</pre>
+            </div>
+
+            <!-- Snippet 2: ESP32 Dual-Server Firmware -->
+            <div class="bg-brand-card border border-brand-border rounded-xl p-4 space-y-2">
+                <div class="flex justify-between text-xs text-brand-beige/70 font-mono">
+                    <span>CameraWebServer.ino — ESP32 Dual Web Server & GPIO 13 Driver</span>
+                    <span class="text-amber-200">C++ / Arduino IDE</span>
+                </div>
+                <pre class="bg-black/70 p-4 rounded-lg text-emerald-400 font-mono text-xs overflow-x-auto leading-relaxed border border-brand-border/60">
+// ESP32-CAM Dual Web Server & Active Buzzer Controller
+#include "esp_camera.h"
+#include &lt;WiFi.h&gt;
+#include &lt;WebServer.h&gt;
+
+#define BUZZER_PIN 13
+WebServer server(80);
+
+void handleBuzzerOn() {
+  digitalWrite(BUZZER_PIN, HIGH); // Sound acoustic alarm
+  server.send(200, "text/plain", "BUZZER_ACTIVE");
+}
+
+void handleBuzzerOff() {
+  digitalWrite(BUZZER_PIN, LOW);  // Silence alarm
+  server.send(200, "text/plain", "BUZZER_MUTED");
+}
+
+void setup() {
+  pinMode(BUZZER_PIN, OUTPUT);
+  digitalWrite(BUZZER_PIN, LOW);
+  
+  // Initialize HTTP REST control endpoints on Port 80
+  server.on("/buzzer/on", HTTP_GET, handleBuzzerOn);
+  server.on("/buzzer/off", HTTP_GET, handleBuzzerOff);
+  server.begin();
+}</pre>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 px-6 border-t border-brand-border text-center text-xs text-brand-beige/60">
+        <p>© 2026 Muhammad Ikhwan Bin Nazeri. Hosted on GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
